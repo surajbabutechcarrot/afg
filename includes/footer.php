@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add hover effects to cards
-    const cards = document.querySelectorAll('.hero-card, .division-card, .brand-assets-card, .handbook-card');
+    // Add hover effects to cards (excluding hero-card)
+    const cards = document.querySelectorAll('.division-card, .brand-assets-card, .handbook-card');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-5px)';

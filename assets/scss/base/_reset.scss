@@ -31,15 +31,16 @@ transition: opacity 300ms;
 }
 .form-control,input,button {
   appearance: none;
-    -moz-appearance: none;
--webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 select.default {
+  appearance: none;
   -moz-appearance: none;
--webkit-appearance: none;
-background: $white url('../images/carret.png') no-repeat 96% 50%;
-outline: none;
+  -webkit-appearance: none;
+  background: $white url('../images/carret.png') no-repeat 96% 50%;
+  outline: none;
 &:focus,
 &:active {
  outline: none;
@@ -200,4 +201,53 @@ p {
 			margin-top: 20px !important;
 		}
 	}
+}
+
+// High-DPI Display Optimizations
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    // Optimize text rendering for high-DPI displays
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+    
+    // Optimize image rendering
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+    
+    // Optimize border rendering
+    * {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    // Optimize scrollbar rendering for high-DPI
+    ::-webkit-scrollbar {
+        width: 7px; // Slightly thinner for high-DPI
+        height: 7px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 3px; // Slightly smaller radius
+    }
+    
+    // Optimize focus indicators
+    *:focus {
+        outline-width: 2px; // Thinner outline for high-DPI
+    }
+    
+    // Optimize button rendering
+    button, .btn {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    // Optimize form elements
+    input, textarea, select {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 }

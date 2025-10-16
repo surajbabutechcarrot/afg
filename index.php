@@ -138,118 +138,127 @@
 <!-- Hero Section -->
 <section class="hero-section py-0">
     <div class="container-fluid px-0">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="hero-banner">
+        <div class="row m-0">
+            <div class="col-lg-8 px-0">
+                <a href="#" class="hero-banner">
                     <div class="hero-image">
                         <img src="assets/images/banner.png" alt="Hero Banner" class="img-fluid">
                     </div>
                     <div class="hero-overlay">
                         <h2>Al-Futtaim Launches "Building Bridges" to Empower Emirati Youth and Celebrate 70 Years of UAE-Japan Partnership</h2>
                     </div>
-                </div>
+</a>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 px-0">
                 <div class="hero-cards">
-                    <div class="hero-card competition-card">
+                    <a href="#" class="hero-card competition-card">
                         <div class="card-image">
-                            <img src="https://dummyimage.com/800x400/ccc/fff" alt="Competition" class="img-fluid">
+                            <img src="assets/images/right-1.png" alt="Competition" class="img-fluid">
+                            <div class="card-overlay">
+                                <h3>Competition: Cultural Diversity Day</h3>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <h3>Competition: Cultural Diversity Day</h3>
-                        </div>
-                    </div>
-                    <div class="hero-card talks-card">
+</a>
+                    <a href="#" class="hero-card talks-card">
                         <div class="card-image">
-                            <img src="https://dummyimage.com/800x400/ccc/fff" alt="Mid-Year Talks" class="img-fluid">
+                            <img src="assets/images/right-2.png" alt="Mid-Year Talks" class="img-fluid">
+                            <div class="card-overlay">
+                                <h3>Mid-Year Talks: Happening Now</h3>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <h3>Mid-Year Talks: Happening Now</h3>
-                        </div>
-                    </div>
+</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Latest News Section -->
-<section class="latest-news">
+<!-- News Section -->
+<section class="news-section">
     <div class="container">
-        <div class="section-header d-flex justify-content-between align-items-center">
-            <h2>Latest News</h2>
-            <a href="#" class="see-all-link">See all</a>
-        </div>
         <div class="row">
-            <div class="col-lg-8">
-                <div class="main-news-item">
-                    <div class="news-image">
-                        <img src="https://via.placeholder.com/600x300/ffffff/002060?text=SUV+in+Desert" alt="Main News" class="img-fluid">
+            <!-- Latest News Column -->
+            <div class="col-lg-8 px-0">
+                <div class="news-column latest-news">
+                    <div class="section-header d-flex justify-content-between align-items-center">
+                        <h2>Latest News</h2>
+                        <a href="#" class="see-all-link">See all</a>
                     </div>
-                    <div class="news-content">
-                        <h3>News title goes here, 2 rows max</h3>
-                        <p>Description goes here, 2 row max</p>
+                    <div class="row">
+                        <!-- Main News Item Column -->
+                        <div class="col-lg-7">
+                            <div class="main-news-item">
+                                <div class="news-image">
+                                    <img src="assets/images/main-news.png" alt="Main News" class="img-fluid">
+                                </div>
+                                <div class="news-content">
+                                    <h3>News title goes here, 2 rows max</h3>
+                                    <p>Description goes here, 2 row max</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- News Thumbnails Column -->
+                        <div class="col-lg-5">
+                            <div class="news-list">
+                                <div class="news-item">
+                                    <div class="news-thumb">
+                                        <img src="assets/images/main-news.png" alt="News" class="img-fluid">
+                                    </div>
+                                    <div class="news-text">
+                                        <h4>Al-Futtaim Technologies and Johnson Controls Partner to Launch OpenBlue S...</h4>
+                                        <p>Description goes here, 1 row max</p>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-thumb">
+                                        <img src="https://via.placeholder.com/80x80/ffffff/002060?text=Person" alt="News" class="img-fluid">
+                                    </div>
+                                    <div class="news-text">
+                                        <h4>News title goes here, 2 rows max</h4>
+                                        <p>Description goes here, 1 row max</p>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-thumb">
+                                        <img src="https://via.placeholder.com/80x80/ffffff/002060?text=Handshake" alt="News" class="img-fluid">
+                                    </div>
+                                    <div class="news-text">
+                                        <h4>News title goes here, 2 rows max</h4>
+                                        <p>Description goes here, 1 row max</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Al-Futtaim in the Media Column -->
             <div class="col-lg-4">
-                <div class="news-list">
-                    <div class="news-item">
-                        <div class="news-thumb">
-                            <img src="https://via.placeholder.com/80x80/ffffff/002060?text=Stage" alt="News" class="img-fluid">
-                        </div>
-                        <div class="news-text">
-                            <h4>Al-Futtaim Technologies and Johnson Controls Partner to Launch OpenBlue S...</h4>
-                            <p>Description goes here, 1 row max</p>
-                        </div>
+                <div class="news-column media-section">
+                    <div class="section-header d-flex justify-content-between align-items-center">
+                        <h2>Al-Futtaim in the Media</h2>
+                        <a href="#" class="see-all-link">See all</a>
                     </div>
-                    <div class="news-item">
-                        <div class="news-thumb">
-                            <img src="https://via.placeholder.com/80x80/ffffff/002060?text=Person" alt="News" class="img-fluid">
+                    <div class="media-list">
+                        <div class="media-item">
+                            <div class="media-category">Al-Futtaim news</div>
+                            <h4>The Top 21 Schools in Dubai and Their Fees</h4>
                         </div>
-                        <div class="news-text">
-                            <h4>News title goes here, 2 rows max</h4>
-                            <p>Description goes here, 1 row max</p>
+                        <div class="media-item">
+                            <div class="media-category">Al-Futtaim news</div>
+                            <h4>Leo & Loona goes regional: Redefining family edutainment across the Gulf</h4>
                         </div>
-                    </div>
-                    <div class="news-item">
-                        <div class="news-thumb">
-                            <img src="https://via.placeholder.com/80x80/ffffff/002060?text=Handshake" alt="News" class="img-fluid">
+                        <div class="media-item">
+                            <div class="media-category">Automotive</div>
+                            <h4>Charge your EV in under 30 minutes: Parkin, e& to install 200 ultra-fast chargers in Dubai</h4>
                         </div>
-                        <div class="news-text">
-                            <h4>News title goes here, 2 rows max</h4>
-                            <p>Description goes here, 1 row max</p>
+                        <div class="media-item">
+                            <div class="media-category">Real estate</div>
+                            <h4>Dubai's High-Rise Paradox: Peak, Pause, or the New Normal?</h4>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Al-Futtaim in the Media Section -->
-<section class="media-section">
-    <div class="container">
-        <div class="section-header d-flex justify-content-between align-items-center">
-            <h2>Al-Futtaim in the Media</h2>
-            <a href="#" class="see-all-link">See all</a>
-        </div>
-        <div class="media-list">
-            <div class="media-item">
-                <span class="media-category">Al-Futtaim news</span>
-                <h4>The Top 21 Schools in Dubai and Their Fees</h4>
-            </div>
-            <div class="media-item">
-                <span class="media-category">Al-Futtaim news</span>
-                <h4>Leo & Loona goes regional: Redefining family edutainment across the Gulf</h4>
-            </div>
-            <div class="media-item">
-                <span class="media-category">Automotive</span>
-                <h4>Charge your EV in under 30 minutes: Parkin, e& to install 200 ultra-fast chargers in Dubai</h4>
-            </div>
-            <div class="media-item">
-                <span class="media-category">Real estate</span>
-                <h4>Dubai's High-Rise Paradox: Peak, Pause, or the New Normal?</h4>
             </div>
         </div>
     </div>

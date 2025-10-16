@@ -13574,6 +13574,7 @@ img {
 }
 
 select.default {
+  appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
   background: #fff url("../images/carret.png") no-repeat 96% 50%;
@@ -13718,6 +13719,39 @@ select.default:focus, select.default:active {
   margin-top: 20px !important;
 }
 
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  * {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+  }
+  *:focus {
+    outline-width: 2px;
+  }
+  button, .btn {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  input, textarea, select {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
 .ttl {
   font-weight: 600;
   margin-bottom: 32px;
@@ -14679,6 +14713,104 @@ body.show-menu .mob-btn span + span + span {
   content: none;
 }
 
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .top-navbar {
+    min-height: 65px;
+  }
+  .top-navbar .container-fluid, .top-navbar .container-sm, .top-navbar .container-md, .top-navbar .container-lg, .top-navbar .container-xl, .top-navbar .container-xxl {
+    padding: 0 18px;
+  }
+  .top-navbar .navbar-brand .logo-icon {
+    width: 38px;
+    height: 38px;
+  }
+  .top-navbar .navbar-brand .logo-icon::before {
+    font-size: 13px;
+  }
+  .top-navbar .navbar-brand .brand-text {
+    font-size: 17px;
+  }
+  .top-navbar .navbar-nav-container {
+    margin: 0 35px;
+  }
+  .top-navbar .navbar-nav .nav-item {
+    margin-right: 25px;
+  }
+  .top-navbar .navbar-nav .nav-item .nav-link {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+  .top-navbar .navbar-nav .nav-item .nav-link i {
+    font-size: 11px;
+  }
+  .top-navbar .navbar-icons {
+    gap: 18px;
+  }
+  .top-navbar .navbar-icons .icon-item .icon-circle {
+    width: 48px;
+    height: 48px;
+  }
+  .top-navbar .navbar-icons .icon-item .icon-circle i {
+    font-size: 17px;
+  }
+  .top-navbar .navbar-icons .icon-item span {
+    font-size: 11px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 991.98px), (min-resolution: 144dpi) and (max-width: 991.98px), (min-resolution: 1.5dppx) and (max-width: 991.98px) {
+  .top-navbar .navbar-collapse {
+    padding: 18px;
+  }
+  .top-navbar .navbar-collapse .navbar-nav .nav-item {
+    margin-bottom: 12px;
+  }
+  .top-navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+  .top-navbar .navbar-icons {
+    gap: 12px;
+  }
+  .top-navbar .navbar-icons .icon-item .icon-circle {
+    width: 42px;
+    height: 42px;
+  }
+  .top-navbar .navbar-icons .icon-item .icon-circle i {
+    font-size: 15px;
+  }
+  .top-navbar .navbar-icons .icon-item span {
+    font-size: 10px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 576px), (min-resolution: 144dpi) and (max-width: 576px), (min-resolution: 1.5dppx) and (max-width: 576px) {
+  .top-navbar .navbar-icons {
+    gap: 10px;
+  }
+  .top-navbar .navbar-icons .icon-item .icon-circle {
+    width: 38px;
+    height: 38px;
+  }
+  .top-navbar .navbar-icons .icon-item .icon-circle i {
+    font-size: 13px;
+  }
+  .top-navbar .navbar-icons .icon-item span {
+    font-size: 9px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .dropdown-menu {
+    min-width: 200px;
+    padding: 6px 0;
+  }
+  .dropdown-menu .dropdown-item {
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+  .dropdown-menu .dropdown-item i {
+    font-size: 13px;
+    width: 15px;
+  }
+}
 body {
   font-family: "Neue Montreal", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 16px;
@@ -14981,7 +15113,12 @@ html {
 }
 
 .hero-section {
-  padding: 40px 0;
+  padding: 20px 0;
+}
+.hero-section .row {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 .hero-section .hero-banner {
   position: relative;
@@ -14989,12 +15126,58 @@ html {
   overflow: hidden;
   -webkit-box-shadow: 0 8px 32px rgba(0, 32, 96, 0.15);
           box-shadow: 0 8px 32px rgba(0, 32, 96, 0.15);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 480px;
+  min-height: 300px;
+  -webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.hero-section .hero-banner .hero-image img {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.hero-section .hero-banner:hover {
+  -webkit-box-shadow: 0 16px 48px rgba(0, 32, 96, 0.25);
+          box-shadow: 0 16px 48px rgba(0, 32, 96, 0.25);
+}
+.hero-section .hero-banner:hover .hero-image img {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+.hero-section .hero-banner:hover .hero-overlay {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.95)));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+}
+.hero-section .hero-banner:hover .hero-overlay h2, .hero-section .hero-banner:hover .hero-overlay .h2 {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+.hero-section .hero-banner .hero-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
 }
 .hero-section .hero-banner .hero-image img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-section .hero-banner .hero-overlay {
   position: absolute;
@@ -15003,14 +15186,23 @@ html {
   right: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.8)));
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  padding: 40px 30px 30px;
+  padding: 40px 15px;
   color: #fff;
+  z-index: 10;
+  min-height: 60px;
+  -webkit-transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-section .hero-banner .hero-overlay h2, .hero-section .hero-banner .hero-overlay .h2 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.2;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-section .hero-cards {
   display: -webkit-box;
@@ -15020,40 +15212,94 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 0px;
   margin-top: 0px;
+  height: 100%;
+  max-height: 480px;
+  min-height: 300px;
 }
 .hero-section .hero-cards .hero-card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
   -webkit-box-shadow: 0 4px 20px rgba(0, 32, 96, 0.1);
           box-shadow: 0 4px 20px rgba(0, 32, 96, 0.1);
-  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
-  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  cursor: pointer;
 }
 .hero-section .hero-cards .hero-card:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-box-shadow: 0 8px 32px rgba(0, 32, 96, 0.2);
-          box-shadow: 0 8px 32px rgba(0, 32, 96, 0.2);
+  -webkit-box-shadow: 0 12px 40px rgba(0, 32, 96, 0.25);
+          box-shadow: 0 12px 40px rgba(0, 32, 96, 0.25);
+}
+.hero-section .hero-cards .hero-card:hover .card-image img {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+.hero-section .hero-cards .hero-card:hover .card-overlay {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.95)));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+}
+.hero-section .hero-cards .hero-card:hover .card-overlay h3, .hero-section .hero-cards .hero-card:hover .card-overlay .h3 {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+.hero-section .hero-cards .hero-card .card-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
 }
 .hero-section .hero-cards .hero-card .card-image img {
   width: 100%;
-  height: 150px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero-section .hero-cards .hero-card .card-content {
-  padding: 20px;
+.hero-section .hero-cards .hero-card .card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.9)));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  padding: 15px 12px 10px;
+  color: #fff;
+  z-index: 10;
+  min-height: 60px;
+  -webkit-transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero-section .hero-cards .hero-card .card-content h3, .hero-section .hero-cards .hero-card .card-content .h3 {
-  font-size: 18px;
+.hero-section .hero-cards .hero-card .card-overlay h3, .hero-section .hero-cards .hero-card .card-overlay .h3 {
+  font-size: 14px;
   font-weight: 600;
   margin: 0;
-  color: #333333;
+  color: #fff;
+  line-height: 1.2;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-header {
@@ -15082,11 +15328,10 @@ html {
 
 .latest-news {
   padding: 60px 0;
-  background-color: #F5F5F5;
 }
 .latest-news .main-news-item {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
   -webkit-box-shadow: 0 4px 20px rgba(0, 32, 96, 0.1);
           box-shadow: 0 4px 20px rgba(0, 32, 96, 0.1);
@@ -15119,9 +15364,8 @@ html {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-bottom: 20px;
-  padding: 15px;
+  padding: 0;
   background: #fff;
-  border-radius: 8px;
   -webkit-box-shadow: 0 2px 10px rgba(0, 32, 96, 0.05);
           box-shadow: 0 2px 10px rgba(0, 32, 96, 0.05);
 }
@@ -15131,11 +15375,10 @@ html {
       flex-shrink: 0;
 }
 .latest-news .news-list .news-item .news-thumb img {
-  width: 80px;
-  height: 80px;
+  width: 126px;
+  height: 94px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 6px;
 }
 .latest-news .news-list .news-item .news-text h4, .latest-news .news-list .news-item .news-text .h4 {
   font-size: 16px;
@@ -15148,6 +15391,152 @@ html {
   font-size: 14px;
   color: #666666;
   margin: 0;
+}
+
+.news-section {
+  padding: 60px 0;
+  background: #fff;
+}
+.news-section .news-column {
+  padding: 0 15px;
+}
+.news-section .news-column .section-header {
+  margin-bottom: 30px;
+}
+.news-section .news-column .section-header h2, .news-section .news-column .section-header .h2 {
+  color: #002060;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+.news-section .news-column .section-header .see-all-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+.news-section .news-column .section-header .see-all-link:hover {
+  color: #002060;
+  text-decoration: underline;
+}
+.news-section .latest-news .main-news-item {
+  margin-bottom: 25px;
+}
+.news-section .latest-news .main-news-item .news-image {
+  margin-bottom: 15px;
+  border-radius: 0;
+  overflow: hidden;
+}
+.news-section .latest-news .main-news-item .news-image img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.news-section .latest-news .main-news-item .news-content h3, .news-section .latest-news .main-news-item .news-content .h3 {
+  color: #002060;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.news-section .latest-news .main-news-item .news-content p {
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+.news-section .latest-news .news-list .news-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #E0E0E0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.news-section .latest-news .news-list .news-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.news-section .latest-news .news-list .news-item:hover {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+.news-section .latest-news .news-list .news-item:hover .news-text h4, .news-section .latest-news .news-list .news-item:hover .news-text .h4 {
+  color: #007bff;
+}
+.news-section .latest-news .news-list .news-item .news-thumb {
+  width: 126px;
+  height: 94px;
+  margin-right: 15px;
+  border-radius: 0;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.news-section .latest-news .news-list .news-item .news-thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.news-section .latest-news .news-list .news-item .news-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.news-section .latest-news .news-list .news-item .news-text h4, .news-section .latest-news .news-list .news-item .news-text .h4 {
+  color: #002060;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.news-section .latest-news .news-list .news-item .news-text p {
+  color: #666666;
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0;
+}
+.news-section .media-section .media-list .media-item {
+  position: relative;
+  padding: 15px 0 15px 20px;
+  margin-bottom: 8px;
+  border-left: 3px solid #007bff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.news-section .media-section .media-list .media-item:hover {
+  background-color: rgba(0, 123, 255, 0.05);
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+.news-section .media-section .media-list .media-item:hover h4, .news-section .media-section .media-list .media-item:hover .h4 {
+  color: #007bff;
+}
+.news-section .media-section .media-list .media-item .media-category {
+  color: #666666;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.news-section .media-section .media-list .media-item h4, .news-section .media-section .media-list .media-item .h4 {
+  color: #002060;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .media-section {
@@ -15496,8 +15885,6 @@ html {
 }
 .brand-handbook-section .brand-assets-card:hover,
 .brand-handbook-section .handbook-card:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
   -webkit-box-shadow: 0 8px 32px rgba(0, 32, 96, 0.2);
           box-shadow: 0 8px 32px rgba(0, 32, 96, 0.2);
 }
@@ -15636,6 +16023,1128 @@ html {
   color: #00aeef;
 }
 
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  body {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .top-navbar {
+    padding: 12px 0;
+  }
+  .top-navbar .navbar-brand {
+    font-size: 17px;
+  }
+  .top-navbar .navbar-nav .nav-item .nav-link {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+  .top-navbar .navbar-icons .icon-item .icon-circle {
+    width: 48px;
+    height: 48px;
+  }
+  .top-navbar .navbar-icons .icon-item .icon-circle i {
+    font-size: 17px;
+  }
+  .top-navbar .navbar-icons .icon-item span {
+    font-size: 11px;
+  }
+  .welcome-banner {
+    padding: 25px 0;
+  }
+  .welcome-banner .welcome-content .greeting h1, .welcome-banner .welcome-content .greeting .h1 {
+    font-size: 28px;
+  }
+  .welcome-banner .welcome-content p {
+    font-size: 17px;
+  }
+  .welcome-banner .navbar-icons {
+    gap: 18px;
+  }
+  .welcome-banner .navbar-icons .icon-item .icon-circle {
+    width: 48px;
+    height: 48px;
+  }
+  .welcome-banner .navbar-icons .icon-item .icon-circle i {
+    font-size: 17px;
+  }
+  .welcome-banner .navbar-icons .icon-item span {
+    font-size: 11px;
+  }
+  .hero-section {
+    padding: 18px 0;
+  }
+  .hero-section .hero-banner {
+    max-height: 460px;
+  }
+  .hero-section .hero-banner .hero-overlay {
+    padding: 18px 18px 12px;
+  }
+  .hero-section .hero-banner .hero-overlay h2, .hero-section .hero-banner .hero-overlay .h2 {
+    font-size: 17px;
+    line-height: 1.25;
+  }
+  .hero-section .hero-cards {
+    max-height: 460px;
+  }
+  .hero-section .hero-cards .hero-card .card-overlay {
+    padding: 12px 10px 8px;
+  }
+  .hero-section .hero-cards .hero-card .card-overlay h3, .hero-section .hero-cards .hero-card .card-overlay .h3 {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  .section-header {
+    margin-bottom: 25px;
+  }
+  .section-header h2, .section-header .h2 {
+    font-size: 26px;
+  }
+  .section-header p {
+    font-size: 15px;
+  }
+  .latest-news,
+  .media-section,
+  .events-section,
+  .bulletin-section,
+  .offers-section,
+  .divisions-section,
+  .brand-handbook-section {
+    padding: 50px 0;
+  }
+  .latest-news .main-news-item .card-content,
+  .latest-news .main-news-item .news-content,
+  .latest-news .main-news-item .bulletin-content,
+  .latest-news .media-item .card-content,
+  .latest-news .media-item .news-content,
+  .latest-news .media-item .bulletin-content,
+  .latest-news .event-card .card-content,
+  .latest-news .event-card .news-content,
+  .latest-news .event-card .bulletin-content,
+  .latest-news .bulletin-item .card-content,
+  .latest-news .bulletin-item .news-content,
+  .latest-news .bulletin-item .bulletin-content,
+  .latest-news .offer-card .card-content,
+  .latest-news .offer-card .news-content,
+  .latest-news .offer-card .bulletin-content,
+  .latest-news .division-card .card-content,
+  .latest-news .division-card .news-content,
+  .latest-news .division-card .bulletin-content,
+  .latest-news .brand-assets-card .card-content,
+  .latest-news .brand-assets-card .news-content,
+  .latest-news .brand-assets-card .bulletin-content,
+  .latest-news .handbook-card .card-content,
+  .latest-news .handbook-card .news-content,
+  .latest-news .handbook-card .bulletin-content,
+  .media-section .main-news-item .card-content,
+  .media-section .main-news-item .news-content,
+  .media-section .main-news-item .bulletin-content,
+  .media-section .media-item .card-content,
+  .media-section .media-item .news-content,
+  .media-section .media-item .bulletin-content,
+  .media-section .event-card .card-content,
+  .media-section .event-card .news-content,
+  .media-section .event-card .bulletin-content,
+  .media-section .bulletin-item .card-content,
+  .media-section .bulletin-item .news-content,
+  .media-section .bulletin-item .bulletin-content,
+  .media-section .offer-card .card-content,
+  .media-section .offer-card .news-content,
+  .media-section .offer-card .bulletin-content,
+  .media-section .division-card .card-content,
+  .media-section .division-card .news-content,
+  .media-section .division-card .bulletin-content,
+  .media-section .brand-assets-card .card-content,
+  .media-section .brand-assets-card .news-content,
+  .media-section .brand-assets-card .bulletin-content,
+  .media-section .handbook-card .card-content,
+  .media-section .handbook-card .news-content,
+  .media-section .handbook-card .bulletin-content,
+  .events-section .main-news-item .card-content,
+  .events-section .main-news-item .news-content,
+  .events-section .main-news-item .bulletin-content,
+  .events-section .media-item .card-content,
+  .events-section .media-item .news-content,
+  .events-section .media-item .bulletin-content,
+  .events-section .event-card .card-content,
+  .events-section .event-card .news-content,
+  .events-section .event-card .bulletin-content,
+  .events-section .bulletin-item .card-content,
+  .events-section .bulletin-item .news-content,
+  .events-section .bulletin-item .bulletin-content,
+  .events-section .offer-card .card-content,
+  .events-section .offer-card .news-content,
+  .events-section .offer-card .bulletin-content,
+  .events-section .division-card .card-content,
+  .events-section .division-card .news-content,
+  .events-section .division-card .bulletin-content,
+  .events-section .brand-assets-card .card-content,
+  .events-section .brand-assets-card .news-content,
+  .events-section .brand-assets-card .bulletin-content,
+  .events-section .handbook-card .card-content,
+  .events-section .handbook-card .news-content,
+  .events-section .handbook-card .bulletin-content,
+  .bulletin-section .main-news-item .card-content,
+  .bulletin-section .main-news-item .news-content,
+  .bulletin-section .main-news-item .bulletin-content,
+  .bulletin-section .media-item .card-content,
+  .bulletin-section .media-item .news-content,
+  .bulletin-section .media-item .bulletin-content,
+  .bulletin-section .event-card .card-content,
+  .bulletin-section .event-card .news-content,
+  .bulletin-section .event-card .bulletin-content,
+  .bulletin-section .bulletin-item .card-content,
+  .bulletin-section .bulletin-item .news-content,
+  .bulletin-section .bulletin-item .bulletin-content,
+  .bulletin-section .offer-card .card-content,
+  .bulletin-section .offer-card .news-content,
+  .bulletin-section .offer-card .bulletin-content,
+  .bulletin-section .division-card .card-content,
+  .bulletin-section .division-card .news-content,
+  .bulletin-section .division-card .bulletin-content,
+  .bulletin-section .brand-assets-card .card-content,
+  .bulletin-section .brand-assets-card .news-content,
+  .bulletin-section .brand-assets-card .bulletin-content,
+  .bulletin-section .handbook-card .card-content,
+  .bulletin-section .handbook-card .news-content,
+  .bulletin-section .handbook-card .bulletin-content,
+  .offers-section .main-news-item .card-content,
+  .offers-section .main-news-item .news-content,
+  .offers-section .main-news-item .bulletin-content,
+  .offers-section .media-item .card-content,
+  .offers-section .media-item .news-content,
+  .offers-section .media-item .bulletin-content,
+  .offers-section .event-card .card-content,
+  .offers-section .event-card .news-content,
+  .offers-section .event-card .bulletin-content,
+  .offers-section .bulletin-item .card-content,
+  .offers-section .bulletin-item .news-content,
+  .offers-section .bulletin-item .bulletin-content,
+  .offers-section .offer-card .card-content,
+  .offers-section .offer-card .news-content,
+  .offers-section .offer-card .bulletin-content,
+  .offers-section .division-card .card-content,
+  .offers-section .division-card .news-content,
+  .offers-section .division-card .bulletin-content,
+  .offers-section .brand-assets-card .card-content,
+  .offers-section .brand-assets-card .news-content,
+  .offers-section .brand-assets-card .bulletin-content,
+  .offers-section .handbook-card .card-content,
+  .offers-section .handbook-card .news-content,
+  .offers-section .handbook-card .bulletin-content,
+  .divisions-section .main-news-item .card-content,
+  .divisions-section .main-news-item .news-content,
+  .divisions-section .main-news-item .bulletin-content,
+  .divisions-section .media-item .card-content,
+  .divisions-section .media-item .news-content,
+  .divisions-section .media-item .bulletin-content,
+  .divisions-section .event-card .card-content,
+  .divisions-section .event-card .news-content,
+  .divisions-section .event-card .bulletin-content,
+  .divisions-section .bulletin-item .card-content,
+  .divisions-section .bulletin-item .news-content,
+  .divisions-section .bulletin-item .bulletin-content,
+  .divisions-section .offer-card .card-content,
+  .divisions-section .offer-card .news-content,
+  .divisions-section .offer-card .bulletin-content,
+  .divisions-section .division-card .card-content,
+  .divisions-section .division-card .news-content,
+  .divisions-section .division-card .bulletin-content,
+  .divisions-section .brand-assets-card .card-content,
+  .divisions-section .brand-assets-card .news-content,
+  .divisions-section .brand-assets-card .bulletin-content,
+  .divisions-section .handbook-card .card-content,
+  .divisions-section .handbook-card .news-content,
+  .divisions-section .handbook-card .bulletin-content,
+  .brand-handbook-section .main-news-item .card-content,
+  .brand-handbook-section .main-news-item .news-content,
+  .brand-handbook-section .main-news-item .bulletin-content,
+  .brand-handbook-section .media-item .card-content,
+  .brand-handbook-section .media-item .news-content,
+  .brand-handbook-section .media-item .bulletin-content,
+  .brand-handbook-section .event-card .card-content,
+  .brand-handbook-section .event-card .news-content,
+  .brand-handbook-section .event-card .bulletin-content,
+  .brand-handbook-section .bulletin-item .card-content,
+  .brand-handbook-section .bulletin-item .news-content,
+  .brand-handbook-section .bulletin-item .bulletin-content,
+  .brand-handbook-section .offer-card .card-content,
+  .brand-handbook-section .offer-card .news-content,
+  .brand-handbook-section .offer-card .bulletin-content,
+  .brand-handbook-section .division-card .card-content,
+  .brand-handbook-section .division-card .news-content,
+  .brand-handbook-section .division-card .bulletin-content,
+  .brand-handbook-section .brand-assets-card .card-content,
+  .brand-handbook-section .brand-assets-card .news-content,
+  .brand-handbook-section .brand-assets-card .bulletin-content,
+  .brand-handbook-section .handbook-card .card-content,
+  .brand-handbook-section .handbook-card .news-content,
+  .brand-handbook-section .handbook-card .bulletin-content {
+    padding: 18px;
+  }
+  .latest-news .main-news-item .card-content h3, .latest-news .main-news-item .card-content .h3, .latest-news .main-news-item .card-content h4, .latest-news .main-news-item .card-content .h4,
+  .latest-news .main-news-item .news-content h3,
+  .latest-news .main-news-item .news-content .h3,
+  .latest-news .main-news-item .news-content h4,
+  .latest-news .main-news-item .news-content .h4,
+  .latest-news .main-news-item .bulletin-content h3,
+  .latest-news .main-news-item .bulletin-content .h3,
+  .latest-news .main-news-item .bulletin-content h4,
+  .latest-news .main-news-item .bulletin-content .h4,
+  .latest-news .media-item .card-content h3,
+  .latest-news .media-item .card-content .h3,
+  .latest-news .media-item .card-content h4,
+  .latest-news .media-item .card-content .h4,
+  .latest-news .media-item .news-content h3,
+  .latest-news .media-item .news-content .h3,
+  .latest-news .media-item .news-content h4,
+  .latest-news .media-item .news-content .h4,
+  .latest-news .media-item .bulletin-content h3,
+  .latest-news .media-item .bulletin-content .h3,
+  .latest-news .media-item .bulletin-content h4,
+  .latest-news .media-item .bulletin-content .h4,
+  .latest-news .event-card .card-content h3,
+  .latest-news .event-card .card-content .h3,
+  .latest-news .event-card .card-content h4,
+  .latest-news .event-card .card-content .h4,
+  .latest-news .event-card .news-content h3,
+  .latest-news .event-card .news-content .h3,
+  .latest-news .event-card .news-content h4,
+  .latest-news .event-card .news-content .h4,
+  .latest-news .event-card .bulletin-content h3,
+  .latest-news .event-card .bulletin-content .h3,
+  .latest-news .event-card .bulletin-content h4,
+  .latest-news .event-card .bulletin-content .h4,
+  .latest-news .bulletin-item .card-content h3,
+  .latest-news .bulletin-item .card-content .h3,
+  .latest-news .bulletin-item .card-content h4,
+  .latest-news .bulletin-item .card-content .h4,
+  .latest-news .bulletin-item .news-content h3,
+  .latest-news .bulletin-item .news-content .h3,
+  .latest-news .bulletin-item .news-content h4,
+  .latest-news .bulletin-item .news-content .h4,
+  .latest-news .bulletin-item .bulletin-content h3,
+  .latest-news .bulletin-item .bulletin-content .h3,
+  .latest-news .bulletin-item .bulletin-content h4,
+  .latest-news .bulletin-item .bulletin-content .h4,
+  .latest-news .offer-card .card-content h3,
+  .latest-news .offer-card .card-content .h3,
+  .latest-news .offer-card .card-content h4,
+  .latest-news .offer-card .card-content .h4,
+  .latest-news .offer-card .news-content h3,
+  .latest-news .offer-card .news-content .h3,
+  .latest-news .offer-card .news-content h4,
+  .latest-news .offer-card .news-content .h4,
+  .latest-news .offer-card .bulletin-content h3,
+  .latest-news .offer-card .bulletin-content .h3,
+  .latest-news .offer-card .bulletin-content h4,
+  .latest-news .offer-card .bulletin-content .h4,
+  .latest-news .division-card .card-content h3,
+  .latest-news .division-card .card-content .h3,
+  .latest-news .division-card .card-content h4,
+  .latest-news .division-card .card-content .h4,
+  .latest-news .division-card .news-content h3,
+  .latest-news .division-card .news-content .h3,
+  .latest-news .division-card .news-content h4,
+  .latest-news .division-card .news-content .h4,
+  .latest-news .division-card .bulletin-content h3,
+  .latest-news .division-card .bulletin-content .h3,
+  .latest-news .division-card .bulletin-content h4,
+  .latest-news .division-card .bulletin-content .h4,
+  .latest-news .brand-assets-card .card-content h3,
+  .latest-news .brand-assets-card .card-content .h3,
+  .latest-news .brand-assets-card .card-content h4,
+  .latest-news .brand-assets-card .card-content .h4,
+  .latest-news .brand-assets-card .news-content h3,
+  .latest-news .brand-assets-card .news-content .h3,
+  .latest-news .brand-assets-card .news-content h4,
+  .latest-news .brand-assets-card .news-content .h4,
+  .latest-news .brand-assets-card .bulletin-content h3,
+  .latest-news .brand-assets-card .bulletin-content .h3,
+  .latest-news .brand-assets-card .bulletin-content h4,
+  .latest-news .brand-assets-card .bulletin-content .h4,
+  .latest-news .handbook-card .card-content h3,
+  .latest-news .handbook-card .card-content .h3,
+  .latest-news .handbook-card .card-content h4,
+  .latest-news .handbook-card .card-content .h4,
+  .latest-news .handbook-card .news-content h3,
+  .latest-news .handbook-card .news-content .h3,
+  .latest-news .handbook-card .news-content h4,
+  .latest-news .handbook-card .news-content .h4,
+  .latest-news .handbook-card .bulletin-content h3,
+  .latest-news .handbook-card .bulletin-content .h3,
+  .latest-news .handbook-card .bulletin-content h4,
+  .latest-news .handbook-card .bulletin-content .h4,
+  .media-section .main-news-item .card-content h3,
+  .media-section .main-news-item .card-content .h3,
+  .media-section .main-news-item .card-content h4,
+  .media-section .main-news-item .card-content .h4,
+  .media-section .main-news-item .news-content h3,
+  .media-section .main-news-item .news-content .h3,
+  .media-section .main-news-item .news-content h4,
+  .media-section .main-news-item .news-content .h4,
+  .media-section .main-news-item .bulletin-content h3,
+  .media-section .main-news-item .bulletin-content .h3,
+  .media-section .main-news-item .bulletin-content h4,
+  .media-section .main-news-item .bulletin-content .h4,
+  .media-section .media-item .card-content h3,
+  .media-section .media-item .card-content .h3,
+  .media-section .media-item .card-content h4,
+  .media-section .media-item .card-content .h4,
+  .media-section .media-item .news-content h3,
+  .media-section .media-item .news-content .h3,
+  .media-section .media-item .news-content h4,
+  .media-section .media-item .news-content .h4,
+  .media-section .media-item .bulletin-content h3,
+  .media-section .media-item .bulletin-content .h3,
+  .media-section .media-item .bulletin-content h4,
+  .media-section .media-item .bulletin-content .h4,
+  .media-section .event-card .card-content h3,
+  .media-section .event-card .card-content .h3,
+  .media-section .event-card .card-content h4,
+  .media-section .event-card .card-content .h4,
+  .media-section .event-card .news-content h3,
+  .media-section .event-card .news-content .h3,
+  .media-section .event-card .news-content h4,
+  .media-section .event-card .news-content .h4,
+  .media-section .event-card .bulletin-content h3,
+  .media-section .event-card .bulletin-content .h3,
+  .media-section .event-card .bulletin-content h4,
+  .media-section .event-card .bulletin-content .h4,
+  .media-section .bulletin-item .card-content h3,
+  .media-section .bulletin-item .card-content .h3,
+  .media-section .bulletin-item .card-content h4,
+  .media-section .bulletin-item .card-content .h4,
+  .media-section .bulletin-item .news-content h3,
+  .media-section .bulletin-item .news-content .h3,
+  .media-section .bulletin-item .news-content h4,
+  .media-section .bulletin-item .news-content .h4,
+  .media-section .bulletin-item .bulletin-content h3,
+  .media-section .bulletin-item .bulletin-content .h3,
+  .media-section .bulletin-item .bulletin-content h4,
+  .media-section .bulletin-item .bulletin-content .h4,
+  .media-section .offer-card .card-content h3,
+  .media-section .offer-card .card-content .h3,
+  .media-section .offer-card .card-content h4,
+  .media-section .offer-card .card-content .h4,
+  .media-section .offer-card .news-content h3,
+  .media-section .offer-card .news-content .h3,
+  .media-section .offer-card .news-content h4,
+  .media-section .offer-card .news-content .h4,
+  .media-section .offer-card .bulletin-content h3,
+  .media-section .offer-card .bulletin-content .h3,
+  .media-section .offer-card .bulletin-content h4,
+  .media-section .offer-card .bulletin-content .h4,
+  .media-section .division-card .card-content h3,
+  .media-section .division-card .card-content .h3,
+  .media-section .division-card .card-content h4,
+  .media-section .division-card .card-content .h4,
+  .media-section .division-card .news-content h3,
+  .media-section .division-card .news-content .h3,
+  .media-section .division-card .news-content h4,
+  .media-section .division-card .news-content .h4,
+  .media-section .division-card .bulletin-content h3,
+  .media-section .division-card .bulletin-content .h3,
+  .media-section .division-card .bulletin-content h4,
+  .media-section .division-card .bulletin-content .h4,
+  .media-section .brand-assets-card .card-content h3,
+  .media-section .brand-assets-card .card-content .h3,
+  .media-section .brand-assets-card .card-content h4,
+  .media-section .brand-assets-card .card-content .h4,
+  .media-section .brand-assets-card .news-content h3,
+  .media-section .brand-assets-card .news-content .h3,
+  .media-section .brand-assets-card .news-content h4,
+  .media-section .brand-assets-card .news-content .h4,
+  .media-section .brand-assets-card .bulletin-content h3,
+  .media-section .brand-assets-card .bulletin-content .h3,
+  .media-section .brand-assets-card .bulletin-content h4,
+  .media-section .brand-assets-card .bulletin-content .h4,
+  .media-section .handbook-card .card-content h3,
+  .media-section .handbook-card .card-content .h3,
+  .media-section .handbook-card .card-content h4,
+  .media-section .handbook-card .card-content .h4,
+  .media-section .handbook-card .news-content h3,
+  .media-section .handbook-card .news-content .h3,
+  .media-section .handbook-card .news-content h4,
+  .media-section .handbook-card .news-content .h4,
+  .media-section .handbook-card .bulletin-content h3,
+  .media-section .handbook-card .bulletin-content .h3,
+  .media-section .handbook-card .bulletin-content h4,
+  .media-section .handbook-card .bulletin-content .h4,
+  .events-section .main-news-item .card-content h3,
+  .events-section .main-news-item .card-content .h3,
+  .events-section .main-news-item .card-content h4,
+  .events-section .main-news-item .card-content .h4,
+  .events-section .main-news-item .news-content h3,
+  .events-section .main-news-item .news-content .h3,
+  .events-section .main-news-item .news-content h4,
+  .events-section .main-news-item .news-content .h4,
+  .events-section .main-news-item .bulletin-content h3,
+  .events-section .main-news-item .bulletin-content .h3,
+  .events-section .main-news-item .bulletin-content h4,
+  .events-section .main-news-item .bulletin-content .h4,
+  .events-section .media-item .card-content h3,
+  .events-section .media-item .card-content .h3,
+  .events-section .media-item .card-content h4,
+  .events-section .media-item .card-content .h4,
+  .events-section .media-item .news-content h3,
+  .events-section .media-item .news-content .h3,
+  .events-section .media-item .news-content h4,
+  .events-section .media-item .news-content .h4,
+  .events-section .media-item .bulletin-content h3,
+  .events-section .media-item .bulletin-content .h3,
+  .events-section .media-item .bulletin-content h4,
+  .events-section .media-item .bulletin-content .h4,
+  .events-section .event-card .card-content h3,
+  .events-section .event-card .card-content .h3,
+  .events-section .event-card .card-content h4,
+  .events-section .event-card .card-content .h4,
+  .events-section .event-card .news-content h3,
+  .events-section .event-card .news-content .h3,
+  .events-section .event-card .news-content h4,
+  .events-section .event-card .news-content .h4,
+  .events-section .event-card .bulletin-content h3,
+  .events-section .event-card .bulletin-content .h3,
+  .events-section .event-card .bulletin-content h4,
+  .events-section .event-card .bulletin-content .h4,
+  .events-section .bulletin-item .card-content h3,
+  .events-section .bulletin-item .card-content .h3,
+  .events-section .bulletin-item .card-content h4,
+  .events-section .bulletin-item .card-content .h4,
+  .events-section .bulletin-item .news-content h3,
+  .events-section .bulletin-item .news-content .h3,
+  .events-section .bulletin-item .news-content h4,
+  .events-section .bulletin-item .news-content .h4,
+  .events-section .bulletin-item .bulletin-content h3,
+  .events-section .bulletin-item .bulletin-content .h3,
+  .events-section .bulletin-item .bulletin-content h4,
+  .events-section .bulletin-item .bulletin-content .h4,
+  .events-section .offer-card .card-content h3,
+  .events-section .offer-card .card-content .h3,
+  .events-section .offer-card .card-content h4,
+  .events-section .offer-card .card-content .h4,
+  .events-section .offer-card .news-content h3,
+  .events-section .offer-card .news-content .h3,
+  .events-section .offer-card .news-content h4,
+  .events-section .offer-card .news-content .h4,
+  .events-section .offer-card .bulletin-content h3,
+  .events-section .offer-card .bulletin-content .h3,
+  .events-section .offer-card .bulletin-content h4,
+  .events-section .offer-card .bulletin-content .h4,
+  .events-section .division-card .card-content h3,
+  .events-section .division-card .card-content .h3,
+  .events-section .division-card .card-content h4,
+  .events-section .division-card .card-content .h4,
+  .events-section .division-card .news-content h3,
+  .events-section .division-card .news-content .h3,
+  .events-section .division-card .news-content h4,
+  .events-section .division-card .news-content .h4,
+  .events-section .division-card .bulletin-content h3,
+  .events-section .division-card .bulletin-content .h3,
+  .events-section .division-card .bulletin-content h4,
+  .events-section .division-card .bulletin-content .h4,
+  .events-section .brand-assets-card .card-content h3,
+  .events-section .brand-assets-card .card-content .h3,
+  .events-section .brand-assets-card .card-content h4,
+  .events-section .brand-assets-card .card-content .h4,
+  .events-section .brand-assets-card .news-content h3,
+  .events-section .brand-assets-card .news-content .h3,
+  .events-section .brand-assets-card .news-content h4,
+  .events-section .brand-assets-card .news-content .h4,
+  .events-section .brand-assets-card .bulletin-content h3,
+  .events-section .brand-assets-card .bulletin-content .h3,
+  .events-section .brand-assets-card .bulletin-content h4,
+  .events-section .brand-assets-card .bulletin-content .h4,
+  .events-section .handbook-card .card-content h3,
+  .events-section .handbook-card .card-content .h3,
+  .events-section .handbook-card .card-content h4,
+  .events-section .handbook-card .card-content .h4,
+  .events-section .handbook-card .news-content h3,
+  .events-section .handbook-card .news-content .h3,
+  .events-section .handbook-card .news-content h4,
+  .events-section .handbook-card .news-content .h4,
+  .events-section .handbook-card .bulletin-content h3,
+  .events-section .handbook-card .bulletin-content .h3,
+  .events-section .handbook-card .bulletin-content h4,
+  .events-section .handbook-card .bulletin-content .h4,
+  .bulletin-section .main-news-item .card-content h3,
+  .bulletin-section .main-news-item .card-content .h3,
+  .bulletin-section .main-news-item .card-content h4,
+  .bulletin-section .main-news-item .card-content .h4,
+  .bulletin-section .main-news-item .news-content h3,
+  .bulletin-section .main-news-item .news-content .h3,
+  .bulletin-section .main-news-item .news-content h4,
+  .bulletin-section .main-news-item .news-content .h4,
+  .bulletin-section .main-news-item .bulletin-content h3,
+  .bulletin-section .main-news-item .bulletin-content .h3,
+  .bulletin-section .main-news-item .bulletin-content h4,
+  .bulletin-section .main-news-item .bulletin-content .h4,
+  .bulletin-section .media-item .card-content h3,
+  .bulletin-section .media-item .card-content .h3,
+  .bulletin-section .media-item .card-content h4,
+  .bulletin-section .media-item .card-content .h4,
+  .bulletin-section .media-item .news-content h3,
+  .bulletin-section .media-item .news-content .h3,
+  .bulletin-section .media-item .news-content h4,
+  .bulletin-section .media-item .news-content .h4,
+  .bulletin-section .media-item .bulletin-content h3,
+  .bulletin-section .media-item .bulletin-content .h3,
+  .bulletin-section .media-item .bulletin-content h4,
+  .bulletin-section .media-item .bulletin-content .h4,
+  .bulletin-section .event-card .card-content h3,
+  .bulletin-section .event-card .card-content .h3,
+  .bulletin-section .event-card .card-content h4,
+  .bulletin-section .event-card .card-content .h4,
+  .bulletin-section .event-card .news-content h3,
+  .bulletin-section .event-card .news-content .h3,
+  .bulletin-section .event-card .news-content h4,
+  .bulletin-section .event-card .news-content .h4,
+  .bulletin-section .event-card .bulletin-content h3,
+  .bulletin-section .event-card .bulletin-content .h3,
+  .bulletin-section .event-card .bulletin-content h4,
+  .bulletin-section .event-card .bulletin-content .h4,
+  .bulletin-section .bulletin-item .card-content h3,
+  .bulletin-section .bulletin-item .card-content .h3,
+  .bulletin-section .bulletin-item .card-content h4,
+  .bulletin-section .bulletin-item .card-content .h4,
+  .bulletin-section .bulletin-item .news-content h3,
+  .bulletin-section .bulletin-item .news-content .h3,
+  .bulletin-section .bulletin-item .news-content h4,
+  .bulletin-section .bulletin-item .news-content .h4,
+  .bulletin-section .bulletin-item .bulletin-content h3,
+  .bulletin-section .bulletin-item .bulletin-content .h3,
+  .bulletin-section .bulletin-item .bulletin-content h4,
+  .bulletin-section .bulletin-item .bulletin-content .h4,
+  .bulletin-section .offer-card .card-content h3,
+  .bulletin-section .offer-card .card-content .h3,
+  .bulletin-section .offer-card .card-content h4,
+  .bulletin-section .offer-card .card-content .h4,
+  .bulletin-section .offer-card .news-content h3,
+  .bulletin-section .offer-card .news-content .h3,
+  .bulletin-section .offer-card .news-content h4,
+  .bulletin-section .offer-card .news-content .h4,
+  .bulletin-section .offer-card .bulletin-content h3,
+  .bulletin-section .offer-card .bulletin-content .h3,
+  .bulletin-section .offer-card .bulletin-content h4,
+  .bulletin-section .offer-card .bulletin-content .h4,
+  .bulletin-section .division-card .card-content h3,
+  .bulletin-section .division-card .card-content .h3,
+  .bulletin-section .division-card .card-content h4,
+  .bulletin-section .division-card .card-content .h4,
+  .bulletin-section .division-card .news-content h3,
+  .bulletin-section .division-card .news-content .h3,
+  .bulletin-section .division-card .news-content h4,
+  .bulletin-section .division-card .news-content .h4,
+  .bulletin-section .division-card .bulletin-content h3,
+  .bulletin-section .division-card .bulletin-content .h3,
+  .bulletin-section .division-card .bulletin-content h4,
+  .bulletin-section .division-card .bulletin-content .h4,
+  .bulletin-section .brand-assets-card .card-content h3,
+  .bulletin-section .brand-assets-card .card-content .h3,
+  .bulletin-section .brand-assets-card .card-content h4,
+  .bulletin-section .brand-assets-card .card-content .h4,
+  .bulletin-section .brand-assets-card .news-content h3,
+  .bulletin-section .brand-assets-card .news-content .h3,
+  .bulletin-section .brand-assets-card .news-content h4,
+  .bulletin-section .brand-assets-card .news-content .h4,
+  .bulletin-section .brand-assets-card .bulletin-content h3,
+  .bulletin-section .brand-assets-card .bulletin-content .h3,
+  .bulletin-section .brand-assets-card .bulletin-content h4,
+  .bulletin-section .brand-assets-card .bulletin-content .h4,
+  .bulletin-section .handbook-card .card-content h3,
+  .bulletin-section .handbook-card .card-content .h3,
+  .bulletin-section .handbook-card .card-content h4,
+  .bulletin-section .handbook-card .card-content .h4,
+  .bulletin-section .handbook-card .news-content h3,
+  .bulletin-section .handbook-card .news-content .h3,
+  .bulletin-section .handbook-card .news-content h4,
+  .bulletin-section .handbook-card .news-content .h4,
+  .bulletin-section .handbook-card .bulletin-content h3,
+  .bulletin-section .handbook-card .bulletin-content .h3,
+  .bulletin-section .handbook-card .bulletin-content h4,
+  .bulletin-section .handbook-card .bulletin-content .h4,
+  .offers-section .main-news-item .card-content h3,
+  .offers-section .main-news-item .card-content .h3,
+  .offers-section .main-news-item .card-content h4,
+  .offers-section .main-news-item .card-content .h4,
+  .offers-section .main-news-item .news-content h3,
+  .offers-section .main-news-item .news-content .h3,
+  .offers-section .main-news-item .news-content h4,
+  .offers-section .main-news-item .news-content .h4,
+  .offers-section .main-news-item .bulletin-content h3,
+  .offers-section .main-news-item .bulletin-content .h3,
+  .offers-section .main-news-item .bulletin-content h4,
+  .offers-section .main-news-item .bulletin-content .h4,
+  .offers-section .media-item .card-content h3,
+  .offers-section .media-item .card-content .h3,
+  .offers-section .media-item .card-content h4,
+  .offers-section .media-item .card-content .h4,
+  .offers-section .media-item .news-content h3,
+  .offers-section .media-item .news-content .h3,
+  .offers-section .media-item .news-content h4,
+  .offers-section .media-item .news-content .h4,
+  .offers-section .media-item .bulletin-content h3,
+  .offers-section .media-item .bulletin-content .h3,
+  .offers-section .media-item .bulletin-content h4,
+  .offers-section .media-item .bulletin-content .h4,
+  .offers-section .event-card .card-content h3,
+  .offers-section .event-card .card-content .h3,
+  .offers-section .event-card .card-content h4,
+  .offers-section .event-card .card-content .h4,
+  .offers-section .event-card .news-content h3,
+  .offers-section .event-card .news-content .h3,
+  .offers-section .event-card .news-content h4,
+  .offers-section .event-card .news-content .h4,
+  .offers-section .event-card .bulletin-content h3,
+  .offers-section .event-card .bulletin-content .h3,
+  .offers-section .event-card .bulletin-content h4,
+  .offers-section .event-card .bulletin-content .h4,
+  .offers-section .bulletin-item .card-content h3,
+  .offers-section .bulletin-item .card-content .h3,
+  .offers-section .bulletin-item .card-content h4,
+  .offers-section .bulletin-item .card-content .h4,
+  .offers-section .bulletin-item .news-content h3,
+  .offers-section .bulletin-item .news-content .h3,
+  .offers-section .bulletin-item .news-content h4,
+  .offers-section .bulletin-item .news-content .h4,
+  .offers-section .bulletin-item .bulletin-content h3,
+  .offers-section .bulletin-item .bulletin-content .h3,
+  .offers-section .bulletin-item .bulletin-content h4,
+  .offers-section .bulletin-item .bulletin-content .h4,
+  .offers-section .offer-card .card-content h3,
+  .offers-section .offer-card .card-content .h3,
+  .offers-section .offer-card .card-content h4,
+  .offers-section .offer-card .card-content .h4,
+  .offers-section .offer-card .news-content h3,
+  .offers-section .offer-card .news-content .h3,
+  .offers-section .offer-card .news-content h4,
+  .offers-section .offer-card .news-content .h4,
+  .offers-section .offer-card .bulletin-content h3,
+  .offers-section .offer-card .bulletin-content .h3,
+  .offers-section .offer-card .bulletin-content h4,
+  .offers-section .offer-card .bulletin-content .h4,
+  .offers-section .division-card .card-content h3,
+  .offers-section .division-card .card-content .h3,
+  .offers-section .division-card .card-content h4,
+  .offers-section .division-card .card-content .h4,
+  .offers-section .division-card .news-content h3,
+  .offers-section .division-card .news-content .h3,
+  .offers-section .division-card .news-content h4,
+  .offers-section .division-card .news-content .h4,
+  .offers-section .division-card .bulletin-content h3,
+  .offers-section .division-card .bulletin-content .h3,
+  .offers-section .division-card .bulletin-content h4,
+  .offers-section .division-card .bulletin-content .h4,
+  .offers-section .brand-assets-card .card-content h3,
+  .offers-section .brand-assets-card .card-content .h3,
+  .offers-section .brand-assets-card .card-content h4,
+  .offers-section .brand-assets-card .card-content .h4,
+  .offers-section .brand-assets-card .news-content h3,
+  .offers-section .brand-assets-card .news-content .h3,
+  .offers-section .brand-assets-card .news-content h4,
+  .offers-section .brand-assets-card .news-content .h4,
+  .offers-section .brand-assets-card .bulletin-content h3,
+  .offers-section .brand-assets-card .bulletin-content .h3,
+  .offers-section .brand-assets-card .bulletin-content h4,
+  .offers-section .brand-assets-card .bulletin-content .h4,
+  .offers-section .handbook-card .card-content h3,
+  .offers-section .handbook-card .card-content .h3,
+  .offers-section .handbook-card .card-content h4,
+  .offers-section .handbook-card .card-content .h4,
+  .offers-section .handbook-card .news-content h3,
+  .offers-section .handbook-card .news-content .h3,
+  .offers-section .handbook-card .news-content h4,
+  .offers-section .handbook-card .news-content .h4,
+  .offers-section .handbook-card .bulletin-content h3,
+  .offers-section .handbook-card .bulletin-content .h3,
+  .offers-section .handbook-card .bulletin-content h4,
+  .offers-section .handbook-card .bulletin-content .h4,
+  .divisions-section .main-news-item .card-content h3,
+  .divisions-section .main-news-item .card-content .h3,
+  .divisions-section .main-news-item .card-content h4,
+  .divisions-section .main-news-item .card-content .h4,
+  .divisions-section .main-news-item .news-content h3,
+  .divisions-section .main-news-item .news-content .h3,
+  .divisions-section .main-news-item .news-content h4,
+  .divisions-section .main-news-item .news-content .h4,
+  .divisions-section .main-news-item .bulletin-content h3,
+  .divisions-section .main-news-item .bulletin-content .h3,
+  .divisions-section .main-news-item .bulletin-content h4,
+  .divisions-section .main-news-item .bulletin-content .h4,
+  .divisions-section .media-item .card-content h3,
+  .divisions-section .media-item .card-content .h3,
+  .divisions-section .media-item .card-content h4,
+  .divisions-section .media-item .card-content .h4,
+  .divisions-section .media-item .news-content h3,
+  .divisions-section .media-item .news-content .h3,
+  .divisions-section .media-item .news-content h4,
+  .divisions-section .media-item .news-content .h4,
+  .divisions-section .media-item .bulletin-content h3,
+  .divisions-section .media-item .bulletin-content .h3,
+  .divisions-section .media-item .bulletin-content h4,
+  .divisions-section .media-item .bulletin-content .h4,
+  .divisions-section .event-card .card-content h3,
+  .divisions-section .event-card .card-content .h3,
+  .divisions-section .event-card .card-content h4,
+  .divisions-section .event-card .card-content .h4,
+  .divisions-section .event-card .news-content h3,
+  .divisions-section .event-card .news-content .h3,
+  .divisions-section .event-card .news-content h4,
+  .divisions-section .event-card .news-content .h4,
+  .divisions-section .event-card .bulletin-content h3,
+  .divisions-section .event-card .bulletin-content .h3,
+  .divisions-section .event-card .bulletin-content h4,
+  .divisions-section .event-card .bulletin-content .h4,
+  .divisions-section .bulletin-item .card-content h3,
+  .divisions-section .bulletin-item .card-content .h3,
+  .divisions-section .bulletin-item .card-content h4,
+  .divisions-section .bulletin-item .card-content .h4,
+  .divisions-section .bulletin-item .news-content h3,
+  .divisions-section .bulletin-item .news-content .h3,
+  .divisions-section .bulletin-item .news-content h4,
+  .divisions-section .bulletin-item .news-content .h4,
+  .divisions-section .bulletin-item .bulletin-content h3,
+  .divisions-section .bulletin-item .bulletin-content .h3,
+  .divisions-section .bulletin-item .bulletin-content h4,
+  .divisions-section .bulletin-item .bulletin-content .h4,
+  .divisions-section .offer-card .card-content h3,
+  .divisions-section .offer-card .card-content .h3,
+  .divisions-section .offer-card .card-content h4,
+  .divisions-section .offer-card .card-content .h4,
+  .divisions-section .offer-card .news-content h3,
+  .divisions-section .offer-card .news-content .h3,
+  .divisions-section .offer-card .news-content h4,
+  .divisions-section .offer-card .news-content .h4,
+  .divisions-section .offer-card .bulletin-content h3,
+  .divisions-section .offer-card .bulletin-content .h3,
+  .divisions-section .offer-card .bulletin-content h4,
+  .divisions-section .offer-card .bulletin-content .h4,
+  .divisions-section .division-card .card-content h3,
+  .divisions-section .division-card .card-content .h3,
+  .divisions-section .division-card .card-content h4,
+  .divisions-section .division-card .card-content .h4,
+  .divisions-section .division-card .news-content h3,
+  .divisions-section .division-card .news-content .h3,
+  .divisions-section .division-card .news-content h4,
+  .divisions-section .division-card .news-content .h4,
+  .divisions-section .division-card .bulletin-content h3,
+  .divisions-section .division-card .bulletin-content .h3,
+  .divisions-section .division-card .bulletin-content h4,
+  .divisions-section .division-card .bulletin-content .h4,
+  .divisions-section .brand-assets-card .card-content h3,
+  .divisions-section .brand-assets-card .card-content .h3,
+  .divisions-section .brand-assets-card .card-content h4,
+  .divisions-section .brand-assets-card .card-content .h4,
+  .divisions-section .brand-assets-card .news-content h3,
+  .divisions-section .brand-assets-card .news-content .h3,
+  .divisions-section .brand-assets-card .news-content h4,
+  .divisions-section .brand-assets-card .news-content .h4,
+  .divisions-section .brand-assets-card .bulletin-content h3,
+  .divisions-section .brand-assets-card .bulletin-content .h3,
+  .divisions-section .brand-assets-card .bulletin-content h4,
+  .divisions-section .brand-assets-card .bulletin-content .h4,
+  .divisions-section .handbook-card .card-content h3,
+  .divisions-section .handbook-card .card-content .h3,
+  .divisions-section .handbook-card .card-content h4,
+  .divisions-section .handbook-card .card-content .h4,
+  .divisions-section .handbook-card .news-content h3,
+  .divisions-section .handbook-card .news-content .h3,
+  .divisions-section .handbook-card .news-content h4,
+  .divisions-section .handbook-card .news-content .h4,
+  .divisions-section .handbook-card .bulletin-content h3,
+  .divisions-section .handbook-card .bulletin-content .h3,
+  .divisions-section .handbook-card .bulletin-content h4,
+  .divisions-section .handbook-card .bulletin-content .h4,
+  .brand-handbook-section .main-news-item .card-content h3,
+  .brand-handbook-section .main-news-item .card-content .h3,
+  .brand-handbook-section .main-news-item .card-content h4,
+  .brand-handbook-section .main-news-item .card-content .h4,
+  .brand-handbook-section .main-news-item .news-content h3,
+  .brand-handbook-section .main-news-item .news-content .h3,
+  .brand-handbook-section .main-news-item .news-content h4,
+  .brand-handbook-section .main-news-item .news-content .h4,
+  .brand-handbook-section .main-news-item .bulletin-content h3,
+  .brand-handbook-section .main-news-item .bulletin-content .h3,
+  .brand-handbook-section .main-news-item .bulletin-content h4,
+  .brand-handbook-section .main-news-item .bulletin-content .h4,
+  .brand-handbook-section .media-item .card-content h3,
+  .brand-handbook-section .media-item .card-content .h3,
+  .brand-handbook-section .media-item .card-content h4,
+  .brand-handbook-section .media-item .card-content .h4,
+  .brand-handbook-section .media-item .news-content h3,
+  .brand-handbook-section .media-item .news-content .h3,
+  .brand-handbook-section .media-item .news-content h4,
+  .brand-handbook-section .media-item .news-content .h4,
+  .brand-handbook-section .media-item .bulletin-content h3,
+  .brand-handbook-section .media-item .bulletin-content .h3,
+  .brand-handbook-section .media-item .bulletin-content h4,
+  .brand-handbook-section .media-item .bulletin-content .h4,
+  .brand-handbook-section .event-card .card-content h3,
+  .brand-handbook-section .event-card .card-content .h3,
+  .brand-handbook-section .event-card .card-content h4,
+  .brand-handbook-section .event-card .card-content .h4,
+  .brand-handbook-section .event-card .news-content h3,
+  .brand-handbook-section .event-card .news-content .h3,
+  .brand-handbook-section .event-card .news-content h4,
+  .brand-handbook-section .event-card .news-content .h4,
+  .brand-handbook-section .event-card .bulletin-content h3,
+  .brand-handbook-section .event-card .bulletin-content .h3,
+  .brand-handbook-section .event-card .bulletin-content h4,
+  .brand-handbook-section .event-card .bulletin-content .h4,
+  .brand-handbook-section .bulletin-item .card-content h3,
+  .brand-handbook-section .bulletin-item .card-content .h3,
+  .brand-handbook-section .bulletin-item .card-content h4,
+  .brand-handbook-section .bulletin-item .card-content .h4,
+  .brand-handbook-section .bulletin-item .news-content h3,
+  .brand-handbook-section .bulletin-item .news-content .h3,
+  .brand-handbook-section .bulletin-item .news-content h4,
+  .brand-handbook-section .bulletin-item .news-content .h4,
+  .brand-handbook-section .bulletin-item .bulletin-content h3,
+  .brand-handbook-section .bulletin-item .bulletin-content .h3,
+  .brand-handbook-section .bulletin-item .bulletin-content h4,
+  .brand-handbook-section .bulletin-item .bulletin-content .h4,
+  .brand-handbook-section .offer-card .card-content h3,
+  .brand-handbook-section .offer-card .card-content .h3,
+  .brand-handbook-section .offer-card .card-content h4,
+  .brand-handbook-section .offer-card .card-content .h4,
+  .brand-handbook-section .offer-card .news-content h3,
+  .brand-handbook-section .offer-card .news-content .h3,
+  .brand-handbook-section .offer-card .news-content h4,
+  .brand-handbook-section .offer-card .news-content .h4,
+  .brand-handbook-section .offer-card .bulletin-content h3,
+  .brand-handbook-section .offer-card .bulletin-content .h3,
+  .brand-handbook-section .offer-card .bulletin-content h4,
+  .brand-handbook-section .offer-card .bulletin-content .h4,
+  .brand-handbook-section .division-card .card-content h3,
+  .brand-handbook-section .division-card .card-content .h3,
+  .brand-handbook-section .division-card .card-content h4,
+  .brand-handbook-section .division-card .card-content .h4,
+  .brand-handbook-section .division-card .news-content h3,
+  .brand-handbook-section .division-card .news-content .h3,
+  .brand-handbook-section .division-card .news-content h4,
+  .brand-handbook-section .division-card .news-content .h4,
+  .brand-handbook-section .division-card .bulletin-content h3,
+  .brand-handbook-section .division-card .bulletin-content .h3,
+  .brand-handbook-section .division-card .bulletin-content h4,
+  .brand-handbook-section .division-card .bulletin-content .h4,
+  .brand-handbook-section .brand-assets-card .card-content h3,
+  .brand-handbook-section .brand-assets-card .card-content .h3,
+  .brand-handbook-section .brand-assets-card .card-content h4,
+  .brand-handbook-section .brand-assets-card .card-content .h4,
+  .brand-handbook-section .brand-assets-card .news-content h3,
+  .brand-handbook-section .brand-assets-card .news-content .h3,
+  .brand-handbook-section .brand-assets-card .news-content h4,
+  .brand-handbook-section .brand-assets-card .news-content .h4,
+  .brand-handbook-section .brand-assets-card .bulletin-content h3,
+  .brand-handbook-section .brand-assets-card .bulletin-content .h3,
+  .brand-handbook-section .brand-assets-card .bulletin-content h4,
+  .brand-handbook-section .brand-assets-card .bulletin-content .h4,
+  .brand-handbook-section .handbook-card .card-content h3,
+  .brand-handbook-section .handbook-card .card-content .h3,
+  .brand-handbook-section .handbook-card .card-content h4,
+  .brand-handbook-section .handbook-card .card-content .h4,
+  .brand-handbook-section .handbook-card .news-content h3,
+  .brand-handbook-section .handbook-card .news-content .h3,
+  .brand-handbook-section .handbook-card .news-content h4,
+  .brand-handbook-section .handbook-card .news-content .h4,
+  .brand-handbook-section .handbook-card .bulletin-content h3,
+  .brand-handbook-section .handbook-card .bulletin-content .h3,
+  .brand-handbook-section .handbook-card .bulletin-content h4,
+  .brand-handbook-section .handbook-card .bulletin-content .h4 {
+    font-size: 16px;
+  }
+  .latest-news .main-news-item .card-content p,
+  .latest-news .main-news-item .news-content p,
+  .latest-news .main-news-item .bulletin-content p,
+  .latest-news .media-item .card-content p,
+  .latest-news .media-item .news-content p,
+  .latest-news .media-item .bulletin-content p,
+  .latest-news .event-card .card-content p,
+  .latest-news .event-card .news-content p,
+  .latest-news .event-card .bulletin-content p,
+  .latest-news .bulletin-item .card-content p,
+  .latest-news .bulletin-item .news-content p,
+  .latest-news .bulletin-item .bulletin-content p,
+  .latest-news .offer-card .card-content p,
+  .latest-news .offer-card .news-content p,
+  .latest-news .offer-card .bulletin-content p,
+  .latest-news .division-card .card-content p,
+  .latest-news .division-card .news-content p,
+  .latest-news .division-card .bulletin-content p,
+  .latest-news .brand-assets-card .card-content p,
+  .latest-news .brand-assets-card .news-content p,
+  .latest-news .brand-assets-card .bulletin-content p,
+  .latest-news .handbook-card .card-content p,
+  .latest-news .handbook-card .news-content p,
+  .latest-news .handbook-card .bulletin-content p,
+  .media-section .main-news-item .card-content p,
+  .media-section .main-news-item .news-content p,
+  .media-section .main-news-item .bulletin-content p,
+  .media-section .media-item .card-content p,
+  .media-section .media-item .news-content p,
+  .media-section .media-item .bulletin-content p,
+  .media-section .event-card .card-content p,
+  .media-section .event-card .news-content p,
+  .media-section .event-card .bulletin-content p,
+  .media-section .bulletin-item .card-content p,
+  .media-section .bulletin-item .news-content p,
+  .media-section .bulletin-item .bulletin-content p,
+  .media-section .offer-card .card-content p,
+  .media-section .offer-card .news-content p,
+  .media-section .offer-card .bulletin-content p,
+  .media-section .division-card .card-content p,
+  .media-section .division-card .news-content p,
+  .media-section .division-card .bulletin-content p,
+  .media-section .brand-assets-card .card-content p,
+  .media-section .brand-assets-card .news-content p,
+  .media-section .brand-assets-card .bulletin-content p,
+  .media-section .handbook-card .card-content p,
+  .media-section .handbook-card .news-content p,
+  .media-section .handbook-card .bulletin-content p,
+  .events-section .main-news-item .card-content p,
+  .events-section .main-news-item .news-content p,
+  .events-section .main-news-item .bulletin-content p,
+  .events-section .media-item .card-content p,
+  .events-section .media-item .news-content p,
+  .events-section .media-item .bulletin-content p,
+  .events-section .event-card .card-content p,
+  .events-section .event-card .news-content p,
+  .events-section .event-card .bulletin-content p,
+  .events-section .bulletin-item .card-content p,
+  .events-section .bulletin-item .news-content p,
+  .events-section .bulletin-item .bulletin-content p,
+  .events-section .offer-card .card-content p,
+  .events-section .offer-card .news-content p,
+  .events-section .offer-card .bulletin-content p,
+  .events-section .division-card .card-content p,
+  .events-section .division-card .news-content p,
+  .events-section .division-card .bulletin-content p,
+  .events-section .brand-assets-card .card-content p,
+  .events-section .brand-assets-card .news-content p,
+  .events-section .brand-assets-card .bulletin-content p,
+  .events-section .handbook-card .card-content p,
+  .events-section .handbook-card .news-content p,
+  .events-section .handbook-card .bulletin-content p,
+  .bulletin-section .main-news-item .card-content p,
+  .bulletin-section .main-news-item .news-content p,
+  .bulletin-section .main-news-item .bulletin-content p,
+  .bulletin-section .media-item .card-content p,
+  .bulletin-section .media-item .news-content p,
+  .bulletin-section .media-item .bulletin-content p,
+  .bulletin-section .event-card .card-content p,
+  .bulletin-section .event-card .news-content p,
+  .bulletin-section .event-card .bulletin-content p,
+  .bulletin-section .bulletin-item .card-content p,
+  .bulletin-section .bulletin-item .news-content p,
+  .bulletin-section .bulletin-item .bulletin-content p,
+  .bulletin-section .offer-card .card-content p,
+  .bulletin-section .offer-card .news-content p,
+  .bulletin-section .offer-card .bulletin-content p,
+  .bulletin-section .division-card .card-content p,
+  .bulletin-section .division-card .news-content p,
+  .bulletin-section .division-card .bulletin-content p,
+  .bulletin-section .brand-assets-card .card-content p,
+  .bulletin-section .brand-assets-card .news-content p,
+  .bulletin-section .brand-assets-card .bulletin-content p,
+  .bulletin-section .handbook-card .card-content p,
+  .bulletin-section .handbook-card .news-content p,
+  .bulletin-section .handbook-card .bulletin-content p,
+  .offers-section .main-news-item .card-content p,
+  .offers-section .main-news-item .news-content p,
+  .offers-section .main-news-item .bulletin-content p,
+  .offers-section .media-item .card-content p,
+  .offers-section .media-item .news-content p,
+  .offers-section .media-item .bulletin-content p,
+  .offers-section .event-card .card-content p,
+  .offers-section .event-card .news-content p,
+  .offers-section .event-card .bulletin-content p,
+  .offers-section .bulletin-item .card-content p,
+  .offers-section .bulletin-item .news-content p,
+  .offers-section .bulletin-item .bulletin-content p,
+  .offers-section .offer-card .card-content p,
+  .offers-section .offer-card .news-content p,
+  .offers-section .offer-card .bulletin-content p,
+  .offers-section .division-card .card-content p,
+  .offers-section .division-card .news-content p,
+  .offers-section .division-card .bulletin-content p,
+  .offers-section .brand-assets-card .card-content p,
+  .offers-section .brand-assets-card .news-content p,
+  .offers-section .brand-assets-card .bulletin-content p,
+  .offers-section .handbook-card .card-content p,
+  .offers-section .handbook-card .news-content p,
+  .offers-section .handbook-card .bulletin-content p,
+  .divisions-section .main-news-item .card-content p,
+  .divisions-section .main-news-item .news-content p,
+  .divisions-section .main-news-item .bulletin-content p,
+  .divisions-section .media-item .card-content p,
+  .divisions-section .media-item .news-content p,
+  .divisions-section .media-item .bulletin-content p,
+  .divisions-section .event-card .card-content p,
+  .divisions-section .event-card .news-content p,
+  .divisions-section .event-card .bulletin-content p,
+  .divisions-section .bulletin-item .card-content p,
+  .divisions-section .bulletin-item .news-content p,
+  .divisions-section .bulletin-item .bulletin-content p,
+  .divisions-section .offer-card .card-content p,
+  .divisions-section .offer-card .news-content p,
+  .divisions-section .offer-card .bulletin-content p,
+  .divisions-section .division-card .card-content p,
+  .divisions-section .division-card .news-content p,
+  .divisions-section .division-card .bulletin-content p,
+  .divisions-section .brand-assets-card .card-content p,
+  .divisions-section .brand-assets-card .news-content p,
+  .divisions-section .brand-assets-card .bulletin-content p,
+  .divisions-section .handbook-card .card-content p,
+  .divisions-section .handbook-card .news-content p,
+  .divisions-section .handbook-card .bulletin-content p,
+  .brand-handbook-section .main-news-item .card-content p,
+  .brand-handbook-section .main-news-item .news-content p,
+  .brand-handbook-section .main-news-item .bulletin-content p,
+  .brand-handbook-section .media-item .card-content p,
+  .brand-handbook-section .media-item .news-content p,
+  .brand-handbook-section .media-item .bulletin-content p,
+  .brand-handbook-section .event-card .card-content p,
+  .brand-handbook-section .event-card .news-content p,
+  .brand-handbook-section .event-card .bulletin-content p,
+  .brand-handbook-section .bulletin-item .card-content p,
+  .brand-handbook-section .bulletin-item .news-content p,
+  .brand-handbook-section .bulletin-item .bulletin-content p,
+  .brand-handbook-section .offer-card .card-content p,
+  .brand-handbook-section .offer-card .news-content p,
+  .brand-handbook-section .offer-card .bulletin-content p,
+  .brand-handbook-section .division-card .card-content p,
+  .brand-handbook-section .division-card .news-content p,
+  .brand-handbook-section .division-card .bulletin-content p,
+  .brand-handbook-section .brand-assets-card .card-content p,
+  .brand-handbook-section .brand-assets-card .news-content p,
+  .brand-handbook-section .brand-assets-card .bulletin-content p,
+  .brand-handbook-section .handbook-card .card-content p,
+  .brand-handbook-section .handbook-card .news-content p,
+  .brand-handbook-section .handbook-card .bulletin-content p {
+    font-size: 14px;
+  }
+  .dropdown-menu {
+    min-width: 200px;
+  }
+  .dropdown-menu .dropdown-item {
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+  .main-footer {
+    padding: 35px 0;
+  }
+  .main-footer .footer-logo .brand-text {
+    font-size: 17px;
+  }
+  .main-footer .footer-nav ul li a {
+    font-size: 15px;
+  }
+  .main-footer .footer-right .copyright {
+    font-size: 13px;
+  }
+  .main-footer .footer-right .social-icons a {
+    font-size: 16px;
+  }
+}
 @media (max-width: 768px) {
   .welcome-banner .welcome-content .greeting h1, .welcome-banner .welcome-content .greeting .h1 {
     font-size: 24px;

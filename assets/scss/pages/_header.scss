@@ -336,5 +336,139 @@
 
 // Remove Bootstrap dropdown arrow
 .dropdown-toggle::after {
-    content: none;
+            content: none;
+}
+
+// High-DPI Optimization (150% scaling)
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .top-navbar {
+        min-height: 65px; // Slightly reduced height
+        
+        .container-fluid {
+            padding: 0 18px; // Adjusted container padding
+        }
+        
+        .navbar-brand {
+            .logo-icon {
+                width: 38px; // Slightly smaller logo
+                height: 38px;
+                
+                &::before {
+                    font-size: 13px; // Adjusted logo text
+                }
+            }
+            
+            .brand-text {
+                font-size: 17px; // Adjusted brand text
+            }
+        }
+        
+        .navbar-nav-container {
+            margin: 0 35px; // Slightly reduced margin
+        }
+        
+        .navbar-nav .nav-item {
+            margin-right: 25px; // Slightly reduced spacing
+            
+            .nav-link {
+                font-size: 15px; // Adjusted text size
+                padding: 10px 14px; // Adjusted padding
+                
+                i {
+                    font-size: 11px; // Adjusted icon size
+                }
+            }
+        }
+        
+        .navbar-icons {
+            gap: 18px; // Slightly reduced gap
+            
+            .icon-item {
+                .icon-circle {
+                    width: 48px; // Adjusted icon size
+                    height: 48px;
+                    
+                    i {
+                        font-size: 17px; // Adjusted icon size
+                    }
+                }
+                
+                span {
+                    font-size: 11px; // Adjusted text size
+                }
+            }
+        }
+        
+        // Mobile optimizations for high-DPI
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                padding: 18px; // Adjusted mobile padding
+                
+                .navbar-nav .nav-item {
+                    margin-bottom: 12px; // Adjusted spacing
+                    
+                    .nav-link {
+                        padding: 10px 0; // Adjusted mobile padding
+                        font-size: 15px; // Adjusted mobile text size
+                    }
+                }
+            }
+            
+            .navbar-icons {
+                gap: 12px; // Adjusted mobile gap
+                
+                .icon-item {
+                    .icon-circle {
+                        width: 42px; // Adjusted mobile icon size
+                        height: 42px;
+                        
+                        i {
+                            font-size: 15px; // Adjusted mobile icon size
+                        }
+                    }
+                    
+                    span {
+                        font-size: 10px; // Adjusted mobile text size
+                    }
+                }
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .navbar-icons {
+                gap: 10px; // Adjusted small screen gap
+                
+                .icon-item {
+                    .icon-circle {
+                        width: 38px; // Adjusted small screen icon size
+                        height: 38px;
+                        
+                        i {
+                            font-size: 13px; // Adjusted small screen icon size
+                        }
+                    }
+                    
+                    span {
+                        font-size: 9px; // Adjusted small screen text size
+                    }
+                }
+            }
+        }
+    }
+    
+    // Dropdown optimizations for high-DPI
+    .dropdown-menu {
+        min-width: 200px; // Slightly smaller dropdowns
+        padding: 6px 0; // Adjusted padding
+        
+        .dropdown-item {
+            padding: 10px 18px; // Adjusted padding
+            font-size: 15px; // Adjusted text size
+            
+            i {
+                font-size: 13px; // Adjusted icon size
+                width: 15px; // Adjusted icon width
+            }
+        }
+    }
 }
