@@ -1,0 +1,122 @@
+
+
+// Al-Futtaim Design System Colors
+$primary-color: #002060 !default; // Dark blue
+$secondary-color: #00aeef !default; // Accent blue
+$accent-blue: #007bff !default; // Link blue
+$light-blue: #083161 !default; // Light blue background for icons
+$dark-blue: #002060 !default; // Main dark blue
+$white: #ffffff !default;
+$black: #000000 !default;
+$light-gray: #F5F5F5 !default; // Section backgrounds
+$medium-gray: #666666 !default; // Secondary text
+$dark-gray: #333333 !default; // Primary text
+$border-gray: #E0E0E0 !default;
+
+// Custom colors for specific elements
+$welcome-bg: $dark-blue !default;
+$card-bg: $white !default;
+$section-bg: $light-gray !default;
+$text-primary: $dark-gray !default;
+$text-secondary: $medium-gray !default;
+$hover-color: $secondary-color !default;
+
+// Font sizes
+$base-font: 16px !default;
+$text-xs: 12px !default;
+$text-sm: 14px !default;
+$text-md: 16px !default;
+$text-lg: 18px !default;
+$text-xl: 20px !default;
+$text-2xl: 24px !default;
+$text-3xl: 28px !default;
+$text-4xl: 32px !default;
+$text-5xl: 36px !default;
+
+// Font Family - Neue Montreal
+$font-family: 'Neue Montreal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !default;
+$d-ico: 'deafult-icons' !default;
+//button
+$font-light:300;
+$font-regular:400;
+$font-medium:500;
+$font-semibold:600;
+$font-bold:700;
+$font-weight-title : $font-semibold;
+// Spacing
+$gutter-1: 30px !default; // 30px
+$spacing: 50px !default; // 50px.
+// zindex
+$header-z:999;
+$filter-z:99;
+
+
+.d-flx {
+    @include flexbox();
+    &.no-wrap {
+      @include flex-wrap(nowrap);
+    }
+  }
+  .flx-both {
+    @include flx(both);
+  }
+  .flx-top {
+    @include flx(top);
+  }
+  .flx-bottom {
+    @include flx(bottom);
+  }
+  .flx-vcenter {
+    @include flx(vcenter);
+  }
+  .flx-left {
+    @include flx(left);
+  }
+  .flx-right {
+    @include flx(right);
+  }
+  .flx-hcenter {
+    @include flx(hcenter);
+  }
+  .flx-equal-space {
+    @include flx(eqaul-space);
+  }
+  
+  .cf {
+    @include clearfix();
+  }
+  .d-blk {
+    display: block;
+  }
+  .mr-auto {
+    margin-right: auto;
+  }
+  .ml-auto {
+    margin-left: auto;
+  }
+  .h100 {
+    height: 100%;
+  }
+  .w100 {
+    width: 100%;
+  }
+  .tel {
+      cursor: default;
+  }
+  .no-pad {
+    padding: 0!important;
+  }
+  
+  .default {
+    padding: 0!important;
+    margin: 0!important;
+    list-style: none!important;
+    li {
+      list-style-type: none;
+      &:before,&:after {
+        display: none;
+      }
+    }
+  }
+
+  

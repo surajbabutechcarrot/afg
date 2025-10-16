@@ -1,0 +1,340 @@
+// Top Navigation Bar Styles
+.top-navbar {
+    background-color: $dark-blue;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 70px;
+    
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .navbar-brand {
+        color: $white;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: $text-lg;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: $white;
+            border-radius: 8px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            
+            &::before {
+                content: "AF";
+                color: $dark-blue;
+                font-weight: 700;
+                font-size: 14px;
+            }
+        }
+        
+        .brand-text {
+            color: $white;
+        }
+    }
+    
+    // Mobile Menu Toggle Button
+    .navbar-toggler {
+        border: none;
+        padding: 4px 8px;
+        background: transparent;
+        
+        .navbar-toggler-icon {
+            background-image: none;
+            width: 24px;
+            height: 24px;
+            position: relative;
+            
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+    width: 100%;
+                height: 2px;
+                background-color: $white;
+                transition: all 0.3s ease;
+            }
+            
+            &::before {
+                top: 6px;
+            }
+            
+            &::after {
+                bottom: 6px;
+            }
+        }
+        
+        &[aria-expanded="true"] .navbar-toggler-icon {
+            &::before {
+                transform: rotate(45deg);
+                top: 11px;
+            }
+            
+            &::after {
+                transform: rotate(-45deg);
+                bottom: 11px;
+            }
+        }
+    }
+    
+    // Collapsible Navigation
+    .navbar-collapse {
+        flex-grow: 1;
+        
+        .navbar-nav-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin: 0 40px;
+        }
+        
+        .navbar-nav {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            
+            .nav-item {
+                margin-right: 30px;
+                position: relative;
+                
+                &:last-child {
+                    margin-right: 0;
+                }
+                
+                .nav-link {
+                    color: $white;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: $text-md;
+                    padding: 12px 16px;
+                    transition: all 0.3s ease;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    border-radius: 8px;
+                    
+                    &:hover {
+                        color: $light-blue;
+                        background-color: rgba($white, 0.1);
+                        transform: translateY(-1px);
+                    }
+                    
+                    &:focus {
+                        outline: none;
+                        box-shadow: 0 0 0 2px rgba($white, 0.3);
+                    }
+                    
+                    i {
+                        font-size: 12px;
+                        margin-left: 8px;
+                        transition: transform 0.3s ease;
+                    }
+                    
+                    &[aria-expanded="true"] {
+                        color: $light-blue;
+                        background-color: rgba($white, 0.1);
+                        
+                        i {
+                            transform: rotate(180deg);
+                        }
+                    }
+                    
+                    // Add subtle underline on hover
+                    &:hover::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 8px;
+                        left: 16px;
+                        right: 16px;
+                        height: 2px;
+                        background-color: $light-blue;
+                        border-radius: 1px;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Dropdown Menu Styles
+    .dropdown-menu {
+        background-color: $white;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 12px 40px rgba(0, 32, 96, 0.2), 0 4px 16px rgba(0, 32, 96, 0.1);
+        padding: 8px 0;
+        margin-top: 12px;
+        min-width: 220px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-item {
+            color: $text-primary;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: $text-md;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            display: block;
+            position: relative;
+            border-radius: 0;
+            
+            &:first-child {
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+            }
+            
+            &:last-child {
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+            }
+            
+            &:hover {
+                background-color: rgba($dark-blue, 0.08);
+                color: $dark-blue;
+                transform: translateX(4px);
+            }
+            
+            &:active {
+                background-color: rgba($dark-blue, 0.12);
+                color: $dark-blue;
+            }
+            
+            // Add subtle left border on hover
+            &:hover::before {
+                content: '';
+                position: absolute;
+    left: 0;
+    top: 0;
+                bottom: 0;
+                width: 3px;
+                background-color: $dark-blue;
+                border-radius: 0 2px 2px 0;
+            }
+        }
+        
+        // Add arrow pointing up to the trigger
+        &::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid $white;
+            filter: drop-shadow(0 -2px 4px rgba(0, 32, 96, 0.1));
+        }
+    }
+    
+    // Mobile Responsive
+    @media (max-width: 991.98px) {
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: $dark-blue;
+            border-top: 1px solid rgba($white, 0.1);
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            
+            .navbar-nav-container {
+                margin: 0;
+                justify-content: flex-start;
+            }
+            
+            .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+                
+                .nav-item {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                    width: 100%;
+                    
+                    .nav-link {
+                        padding: 12px 0;
+                        border-bottom: 1px solid rgba($white, 0.1);
+                        width: 100%;
+                        border-radius: 0;
+                        
+                        &:hover {
+                            background-color: rgba($white, 0.1);
+                            transform: none;
+                        }
+                        
+                        &:hover::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Mobile dropdown improvements
+        .dropdown-menu {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            box-shadow: none;
+            background-color: rgba($white, 0.1);
+            border-radius: 8px;
+            margin: 8px 0 0 20px;
+            min-width: auto;
+            
+            &::before {
+                display: none;
+            }
+            
+            .dropdown-item {
+                padding: 10px 16px;
+                font-size: $text-sm;
+                color: rgba($white, 0.9);
+                
+                &:hover {
+                    background-color: rgba($white, 0.15);
+                    color: $white;
+                    transform: none;
+                }
+                
+                &:hover::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// Remove Bootstrap dropdown arrow
+.dropdown-toggle::after {
+    content: none;
+}

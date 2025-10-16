@@ -1,0 +1,897 @@
+
+// Al-Futtaim Intranet Homepage Styles
+
+// Global Styles
+body {
+    font-family: $font-family;
+    font-size: $base-font;
+    line-height: 1.6;
+    color: $text-primary;
+    background-color: $white;
+}
+
+
+// Welcome Banner
+.welcome-banner {
+    background-color: $dark-blue;
+    padding: 30px 0;
+    color: $white;
+    
+    .welcome-content {
+        .greeting {
+            margin-bottom: 10px;
+            
+            i {
+                font-size: 24px;
+                margin-right: 15px;
+                color: #FFD700;
+            }
+            
+            h1 {
+                font-size: $text-4xl;
+                font-weight: 600;
+                margin: 0;
+                color: $white;
+            }
+        }
+        
+        p {
+            font-size: $text-lg;
+            margin: 0;
+            color: rgba($white, 0.9);
+        }
+    }
+    
+    .navbar-icons {
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        .icon-item {
+            text-align: center;
+            color: $secondary-color;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-2px);
+            }
+            
+            .icon-circle {
+                width: 50px;
+                height: 50px;
+                background-color: $light-blue;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 5px;
+                transition: background-color 0.3s ease;
+                
+                i {
+                    color: $dark-blue;
+                    font-size: 18px;
+                    transition: color 0.3s ease;
+                }
+            }
+            
+            &:hover .icon-circle {
+                background-color: $white;
+            }
+            
+            &:hover .icon-circle i {
+                color: $dark-blue;
+            }
+            
+            span {
+                font-size: 12px;
+                color: $white;
+                display: block;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+// Hero Section
+.hero-section {
+    padding: 40px 0;
+    
+    .hero-banner {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(0, 32, 96, 0.15);
+        
+        .hero-image {
+            img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+            }
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 40px 30px 30px;
+            color: $white;
+            
+            h2 {
+                font-size: $text-2xl;
+                font-weight: 600;
+                margin: 0;
+                line-height: 1.3;
+            }
+        }
+    }
+    
+    .hero-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+        
+        .hero-card {
+            background: $white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 32, 96, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 32px rgba(0, 32, 96, 0.2);
+            }
+            
+            .card-image {
+                img {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                }
+            }
+            
+            .card-content {
+                padding: 20px;
+                
+                h3 {
+                    font-size: $text-lg;
+                    font-weight: 600;
+                    margin: 0;
+                    color: $text-primary;
+                }
+            }
+        }
+    }
+}
+
+// Section Headers
+.section-header {
+    margin-bottom: 30px;
+    
+    h2 {
+        font-size: $text-3xl;
+        font-weight: 600;
+        color: $text-primary;
+        margin: 0;
+    }
+    
+    p {
+        font-size: $text-md;
+        color: $text-secondary;
+        margin: 10px 0 0;
+    }
+    
+    .see-all-link {
+        color: $secondary-color;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: $text-md;
+        
+        &:hover {
+            color: $dark-blue;
+        }
+    }
+}
+
+// Latest News Section
+.latest-news {
+    padding: 60px 0;
+    background-color: $section-bg;
+    
+    .main-news-item {
+        background: $white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 32, 96, 0.1);
+        
+        .news-image {
+            img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+            }
+        }
+        
+        .news-content {
+            padding: 25px;
+            
+            h3 {
+                font-size: $text-xl;
+                font-weight: 600;
+                margin: 0 0 10px;
+                color: $text-primary;
+            }
+            
+            p {
+                font-size: $text-md;
+                color: $text-secondary;
+                margin: 0;
+            }
+        }
+    }
+    
+    .news-list {
+        .news-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: $white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 32, 96, 0.05);
+            
+            .news-thumb {
+                margin-right: 15px;
+                flex-shrink: 0;
+                
+                img {
+                    width: 80px;
+                    height: 80px;
+                    object-fit: cover;
+                    border-radius: 6px;
+                }
+            }
+            
+            .news-text {
+                h4 {
+                    font-size: $text-md;
+                    font-weight: 600;
+                    margin: 0 0 8px;
+                    color: $text-primary;
+                    line-height: 1.4;
+                }
+                
+                p {
+                    font-size: $text-sm;
+                    color: $text-secondary;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+// Media Section
+.media-section {
+    padding: 60px 0;
+    
+    .media-list {
+        .media-item {
+            padding: 20px 0;
+            border-bottom: 1px solid $border-gray;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+            
+            .media-category {
+                display: inline-block;
+                background-color: $secondary-color;
+                color: $white;
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: $text-xs;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+            
+            h4 {
+                font-size: $text-lg;
+                font-weight: 500;
+                margin: 0;
+                color: $text-primary;
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
+// Events Section
+.events-section {
+    padding: 60px 0;
+    background-color: $section-bg;
+    
+    .events-carousel {
+        .event-card {
+            background: $white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 32, 96, 0.1);
+            position: relative;
+            height: 280px;
+            
+            &.webinar-card {
+                background: linear-gradient(135deg, $dark-blue 0%, lighten($dark-blue, 10%) 100%);
+                color: $white;
+                
+                .event-date {
+                    color: $white;
+                }
+                
+                .event-type {
+                    color: rgba($white, 0.8);
+                }
+                
+                h3 {
+                    color: $white;
+                }
+                
+                .event-details {
+                    color: rgba($white, 0.9);
+                }
+            }
+            
+            &.holiday-card {
+                background: linear-gradient(135deg, $dark-blue 0%, lighten($dark-blue, 10%) 100%);
+                color: $white;
+                
+                .event-date {
+                    color: $white;
+                }
+                
+                .event-type {
+                    color: rgba($white, 0.8);
+                }
+                
+                h3 {
+                    color: $white;
+                }
+                
+                .event-details {
+                    color: rgba($white, 0.9);
+                }
+            }
+            
+            &.event-card-photo {
+                padding: 0;
+                overflow: hidden;
+                
+                .event-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                
+                .event-date,
+                .event-type,
+                h3,
+                .event-details,
+                .event-icon {
+                    position: relative;
+                    z-index: 2;
+                    color: $white;
+                }
+                
+                .event-date {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    background: rgba($dark-blue, 0.9);
+                    padding: 5px 10px;
+                    border-radius: 6px;
+                    font-weight: 600;
+                }
+            }
+            
+            .event-date {
+                font-size: $text-sm;
+                font-weight: 600;
+                color: $dark-blue;
+                margin-bottom: 8px;
+            }
+            
+            .event-type {
+                font-size: $text-sm;
+                color: $text-secondary;
+                margin-bottom: 15px;
+            }
+            
+            h3 {
+                font-size: $text-lg;
+                font-weight: 600;
+                margin: 0 0 20px;
+                color: $text-primary;
+            }
+            
+            .event-details {
+                font-size: $text-sm;
+                color: $text-secondary;
+                margin-bottom: 20px;
+                
+                .event-time {
+                    margin-bottom: 5px;
+                }
+            }
+            
+            .event-icon {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                color: $secondary-color;
+                font-size: 18px;
+            }
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 30px;
+            
+            .indicator {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $border-gray;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                
+                &.active {
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+// Bulletin Section
+.bulletin-section {
+    padding: 60px 0;
+    
+    .bulletin-list {
+        .bulletin-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px 0;
+            border-bottom: 1px solid $border-gray;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+            
+            .bulletin-thumb {
+                margin-right: 20px;
+                flex-shrink: 0;
+                
+                img {
+                    width: 60px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+            }
+            
+            .bulletin-content {
+                .bulletin-category {
+                    display: inline-block;
+                    background-color: $secondary-color;
+                    color: $white;
+                    padding: 4px 12px;
+                    border-radius: 20px;
+                    font-size: $text-xs;
+                    font-weight: 500;
+                    margin-bottom: 8px;
+                }
+                
+                h4 {
+                    font-size: $text-lg;
+                    font-weight: 600;
+                    margin: 0 0 8px;
+                    color: $text-primary;
+                }
+                
+                p {
+                    font-size: $text-md;
+                    color: $text-secondary;
+                    margin: 0 0 8px;
+                }
+                
+                .bulletin-date {
+                    font-size: $text-sm;
+                    color: $text-secondary;
+                }
+            }
+        }
+    }
+}
+
+// Offers Section
+.offers-section {
+    padding: 60px 0;
+    background-color: $section-bg;
+    
+    .offers-carousel {
+        .offer-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 32, 96, 0.15);
+            
+            .offer-image {
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+            
+            .offer-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+                padding: 40px 30px 30px;
+                color: $white;
+                
+                h3 {
+                    font-size: $text-3xl;
+                    font-weight: 600;
+                    margin: 0 0 10px;
+                }
+                
+                .offer-link {
+                    color: $white;
+                    text-decoration: none;
+                    font-size: $text-lg;
+                    font-weight: 500;
+                    
+                    &:hover {
+                        color: $light-blue;
+                    }
+                }
+            }
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 30px;
+            
+            .indicator {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $border-gray;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                
+                &.active {
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+// Divisions Section
+.divisions-section {
+    padding: 60px 0;
+    
+    .divisions-grid {
+        .division-card {
+            background: $white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 32, 96, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 32px rgba(0, 32, 96, 0.2);
+                
+                .division-bar {
+                    background-color: $dark-blue;
+                }
+            }
+            
+            .division-image {
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
+            
+            .division-bar {
+                background-color: $secondary-color;
+                padding: 15px 20px;
+                transition: background-color 0.3s ease;
+                
+                span {
+                    color: $white;
+                    font-weight: 600;
+                    font-size: $text-md;
+                    
+                    i {
+                        margin-left: 8px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Brand & Handbook Section
+.brand-handbook-section {
+    padding: 60px 0;
+    background-color: $section-bg;
+    
+    .brand-assets-card,
+    .handbook-card {
+        background: $white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 32, 96, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(0, 32, 96, 0.2);
+        }
+        
+        .card-image {
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+        
+        .card-content {
+            padding: 25px;
+            
+            h3 {
+                font-size: $text-xl;
+                font-weight: 600;
+                margin: 0 0 15px;
+                color: $text-primary;
+            }
+            
+            .card-link {
+                color: $secondary-color;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: $text-md;
+                
+                &:hover {
+                    color: $dark-blue;
+                }
+            }
+        }
+    }
+    
+    .brand-assets-card {
+        position: relative;
+        
+        .qr-code {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            text-align: center;
+            
+            .qr-image {
+                margin-bottom: 8px;
+                
+                img {
+                    width: 60px;
+                    height: 60px;
+                    object-fit: cover;
+                }
+            }
+            
+            p {
+                font-size: $text-xs;
+                color: $text-secondary;
+                margin: 0;
+                max-width: 80px;
+                line-height: 1.3;
+            }
+        }
+    }
+}
+
+// Footer
+.main-footer {
+    background-color: $white;
+    padding: 40px 0;
+    border-top: 1px solid $border-gray;
+    
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        
+        .logo-icon {
+            width: 35px;
+            height: 35px;
+            background-color: $dark-blue;
+            border-radius: 6px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            
+            &::before {
+                content: "AF";
+                color: $white;
+                font-weight: 700;
+                font-size: 12px;
+            }
+        }
+        
+        .brand-text {
+            color: $dark-blue;
+            font-weight: 600;
+            font-size: $text-lg;
+        }
+    }
+    
+    .footer-nav {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+            
+            li {
+                a {
+                    color: $text-secondary;
+                    text-decoration: none;
+                    font-size: $text-md;
+                    font-weight: 500;
+                    
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+    
+    .footer-right {
+        gap: 20px;
+        
+        .copyright {
+            font-size: $text-sm;
+            color: $text-secondary;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            
+            a {
+                color: $text-secondary;
+                font-size: 18px;
+                transition: color 0.3s ease;
+                
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    
+    .welcome-banner {
+        .welcome-content {
+            .greeting {
+                h1 {
+                    font-size: $text-2xl;
+                }
+            }
+            
+            p {
+                font-size: $text-md;
+            }
+        }
+        
+        .navbar-icons {
+            justify-content: center;
+            margin-top: 20px;
+            gap: 15px;
+            
+            .icon-item {
+                .icon-circle {
+                    width: 45px;
+                    height: 45px;
+                    
+                    i {
+                        font-size: 16px;
+                    }
+                }
+                
+                span {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+    
+    .hero-section {
+        .hero-cards {
+            margin-top: 30px;
+        }
+    }
+    
+    .latest-news {
+        .main-news-item {
+            margin-bottom: 30px;
+        }
+    }
+    
+    .events-section {
+        .events-carousel {
+            .event-card {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    .divisions-section {
+        .divisions-grid {
+            .row {
+                .col-lg-4 {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    
+    .main-footer {
+        .footer-nav {
+            ul {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+        
+        .footer-right {
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+        }
+    }
+} 
