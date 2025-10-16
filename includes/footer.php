@@ -53,5 +53,27 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0)';
         });
     });
+    
+    // Initialize Bootstrap dropdowns for Quick Access Icons
+    const quickAccessDropdowns = document.querySelectorAll('.welcome-banner .navbar-icons .dropdown-toggle');
+    quickAccessDropdowns.forEach(trigger => {
+        // Initialize Bootstrap dropdown
+        const dropdown = new bootstrap.Dropdown(trigger);
+        
+        // Add custom styling on show/hide
+        trigger.addEventListener('show.bs.dropdown', function() {
+            const menu = this.nextElementSibling.nextElementSibling;
+            if (menu) {
+                menu.classList.add('show');
+            }
+        });
+        
+        trigger.addEventListener('hide.bs.dropdown', function() {
+            const menu = this.nextElementSibling.nextElementSibling;
+            if (menu) {
+                menu.classList.remove('show');
+            }
+        });
+    });
 });
 </script>

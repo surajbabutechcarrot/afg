@@ -8,6 +8,120 @@ body {
     line-height: 1.6;
     color: $text-primary;
     background-color: $white;
+    
+    // Custom text selection color
+    ::selection {
+        background-color: rgba($dark-blue, 0.2);
+        color: $dark-blue;
+    }
+    
+    ::-moz-selection {
+        background-color: rgba($dark-blue, 0.2);
+        color: $dark-blue;
+    }
+    
+    // Custom scrollbar styling
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: $light-gray;
+        border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, $dark-blue 0%, lighten($dark-blue, 10%) 100%);
+        border-radius: 4px;
+        border: 1px solid rgba($white, 0.1);
+        
+        &:hover {
+            background: linear-gradient(180deg, darken($dark-blue, 5%) 0%, $dark-blue 100%);
+        }
+        
+        &:active {
+            background: linear-gradient(180deg, darken($dark-blue, 10%) 0%, darken($dark-blue, 5%) 100%);
+        }
+    }
+    
+    ::-webkit-scrollbar-corner {
+        background: $light-gray;
+    }
+    
+    // Firefox scrollbar styling
+    scrollbar-width: thin;
+    scrollbar-color: $dark-blue $light-gray;
+}
+
+// Enhanced scrollbar styling for specific elements
+.welcome-banner,
+.hero-section,
+.latest-news,
+.media-section,
+.events-section,
+.bulletin-section,
+.offers-section,
+.divisions-section,
+.brand-handbook-section {
+    // Custom scrollbar for content areas
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: rgba($dark-blue, 0.05);
+        border-radius: 3px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, rgba($dark-blue, 0.6) 0%, rgba($dark-blue, 0.8) 100%);
+        border-radius: 3px;
+        
+        &:hover {
+            background: linear-gradient(180deg, rgba($dark-blue, 0.7) 0%, rgba($dark-blue, 0.9) 100%);
+        }
+    }
+}
+
+// Smooth scrolling behavior
+html {
+    scroll-behavior: smooth;
+}
+
+// Custom selection styles for different elements
+.welcome-banner {
+    ::selection {
+        background-color: rgba($white, 0.3);
+        color: $white;
+    }
+    
+    ::-moz-selection {
+        background-color: rgba($white, 0.3);
+        color: $white;
+    }
+}
+
+// Enhanced scrollbar for dropdown menus
+.dropdown-menu {
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: rgba($dark-blue, 0.05);
+        border-radius: 2px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgba($dark-blue, 0.3);
+        border-radius: 2px;
+        
+        &:hover {
+            background: rgba($dark-blue, 0.5);
+        }
+    }
 }
 
 
@@ -90,6 +204,94 @@ body {
                 display: block;
                 font-weight: 500;
             }
+            
+            // Dropdown styles for icon items
+            &.dropdown {
+                position: relative;
+                
+                .dropdown-toggle {
+                    cursor: pointer;
+                }
+                
+                .dropdown-menu {
+                    background-color: $white;
+                    border: none;
+                    border-radius: 12px;
+                    box-shadow: 0 12px 40px rgba(0, 32, 96, 0.2), 0 4px 16px rgba(0, 32, 96, 0.1);
+                    padding: 8px 0;
+                    margin-top: 8px;
+                    min-width: 200px;
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    z-index: 1000;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(-10px);
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    display: block; // Ensure it's always displayed
+                    
+                    &.show {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                        display: block;
+                    }
+                    
+                    .dropdown-item {
+                        color: $text-primary;
+                        padding: 12px 20px;
+                        text-decoration: none;
+                        font-size: $text-md;
+                        font-weight: 500;
+                        transition: all 0.2s ease;
+                        display: flex;
+                        align-items: center;
+                        border-radius: 0;
+                        
+                        &:first-child {
+                            border-top-left-radius: 12px;
+                            border-top-right-radius: 12px;
+                        }
+                        
+                        &:last-child {
+                            border-bottom-left-radius: 12px;
+                            border-bottom-right-radius: 12px;
+                        }
+                        
+                        &:hover {
+                            background-color: rgba($dark-blue, 0.08);
+                            color: $dark-blue;
+                        }
+                        
+                        &:active {
+                            background-color: rgba($dark-blue, 0.12);
+                            color: $dark-blue;
+                        }
+                        
+                        i {
+                            margin-right: 10px;
+                            font-size: 14px;
+                            width: 16px;
+                            text-align: center;
+                        }
+                    }
+                    
+                    // Add arrow pointing up to the trigger
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: -8px;
+                        right: 20px;
+                        width: 0;
+                        height: 0;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-bottom: 8px solid $white;
+                        filter: drop-shadow(0 -2px 4px rgba(0, 32, 96, 0.1));
+                    }
+                }
+            }
         }
     }
 }
@@ -100,7 +302,7 @@ body {
     
     .hero-banner {
         position: relative;
-        border-radius: 12px;
+        border-radius: 0;
         overflow: hidden;
         box-shadow: 0 8px 32px rgba(0, 32, 96, 0.15);
         
@@ -134,7 +336,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        margin-top: 20px;
+        margin-top: 0px;
         
         .hero-card {
             background: $white;
@@ -844,6 +1046,42 @@ body {
                 
                 span {
                     font-size: 11px;
+                }
+                
+                // Mobile dropdown styles
+                &.dropdown {
+                    .dropdown-menu {
+                        position: static;
+                        opacity: 1;
+                        visibility: visible;
+                        transform: none;
+                        box-shadow: none;
+                        background-color: rgba($white, 0.1);
+                        border-radius: 8px;
+                        margin: 8px 0 0 0;
+                        min-width: auto;
+                        
+                        &::before {
+                            display: none;
+                        }
+                        
+                        .dropdown-item {
+                            padding: 10px 16px;
+                            font-size: $text-sm;
+                            color: rgba($white, 0.9);
+                            
+                            &:hover {
+                                background-color: rgba($white, 0.15);
+                                color: $white;
+                            }
+                            
+                            i {
+                                margin-right: 8px;
+                                font-size: 12px;
+                                width: 14px;
+                            }
+                        }
+                    }
                 }
             }
         }

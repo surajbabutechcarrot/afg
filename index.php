@@ -78,7 +78,7 @@
                 <div class="welcome-content">
                     <div class="greeting d-flex align-items-center">
                         <i class="fas fa-sun"></i>
-                        <h1>Good day, Nina</h1>
+                        <h1 class="ms-2">Good day, Nina</h1>
                     </div>
                     <p>Explore our latest news, initiatives, and opportunities for you</p>
                 </div>
@@ -87,40 +87,47 @@
                 <!-- Quick Access Icons -->
                 <div class="navbar-icons d-flex">
                     <div class="icon-item">
-                        <div class="icon-circle">
+                        <div class="icon-circle mx-auto">
                             <i class="fas fa-users"></i>
                         </div>
                         <span>PeopleHub</span>
                     </div>
                     <div class="icon-item">
-                        <div class="icon-circle">
+                        <div class="icon-circle mx-auto">
                             <i class="fas fa-laptop"></i>
                         </div>
                         <span>IT services</span>
                     </div>
                     <div class="icon-item">
-                        <div class="icon-circle">
+                        <div class="icon-circle mx-auto">
                             <i class="fas fa-palette"></i>
                         </div>
                         <span>Brand & assets</span>
                     </div>
                     <div class="icon-item">
-                        <div class="icon-circle">
+                        <div class="icon-circle mx-auto">
                             <i class="fas fa-plane"></i>
                         </div>
                         <span>Business travel</span>
                     </div>
                     <div class="icon-item">
-                        <div class="icon-circle">
+                        <div class="icon-circle mx-auto">
                             <i class="fas fa-comments"></i>
                         </div>
                         <span>Viva Engage</span>
                     </div>
-                    <div class="icon-item">
-                        <div class="icon-circle">
+                    <div class="icon-item dropdown">
+                        <div class="icon-circle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" role="button" id="moreDropdown">
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <span>More</span>
+                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Settings</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-question-circle me-2"></i> Help</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-download me-2"></i> Downloads</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-bookmark me-2"></i> Bookmarks</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-share me-2"></i> Share</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -129,13 +136,13 @@
 </section>
 
 <!-- Hero Section -->
-<section class="hero-section">
-    <div class="container-fluid">
+<section class="hero-section py-0">
+    <div class="container-fluid px-0">
         <div class="row">
             <div class="col-lg-8">
                 <div class="hero-banner">
                     <div class="hero-image">
-                        <img src="https://dummyimage.com/800x400/ccc/fff" alt="Hero Banner" class="img-fluid">
+                        <img src="assets/images/banner.png" alt="Hero Banner" class="img-fluid">
                     </div>
                     <div class="hero-overlay">
                         <h2>Al-Futtaim Launches "Building Bridges" to Empower Emirati Youth and Celebrate 70 Years of UAE-Japan Partnership</h2>
