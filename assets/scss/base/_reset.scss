@@ -226,8 +226,8 @@ p {
     
     // Optimize scrollbar rendering for high-DPI
     ::-webkit-scrollbar {
-        width: 7px; // Slightly thinner for high-DPI
-        height: 7px;
+        width: 6px; // Slightly thinner for high-DPI
+        height: 6px;
     }
     
     ::-webkit-scrollbar-thumb {

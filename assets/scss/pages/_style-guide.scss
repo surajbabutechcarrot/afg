@@ -11,7 +11,7 @@ $black: #000000 !default;
 $light-gray: #F5F5F5 !default; // Section backgrounds
 $medium-gray: #666666 !default; // Secondary text
 $dark-gray: #333333 !default; // Primary text
-$border-gray: #E0E0E0 !default;
+$border-gray: #ddd !default;
 
 // Custom colors for specific elements
 $welcome-bg: $dark-blue !default;
@@ -118,5 +118,8 @@ $filter-z:99;
       }
     }
   }
-
+  .carousel-indicators{
+    margin-left: auto!important;
+    margin-right: auto!important;
+  }
   

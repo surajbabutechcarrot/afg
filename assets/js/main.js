@@ -1,19 +1,19 @@
-document.body.innerHTML += "<a href='#' id='back-to-top' title=''></a>";
-const getBTTElm = document.getElementById('back-to-top');
-document.addEventListener('scroll', ev => {
-    if (window.scrollY > 150) {
-        getBTTElm.classList.add('visible');
-    } else {
-        getBTTElm.classList.remove('visible');
-    }
-});
-getBTTElm.addEventListener('click', e => {
-    e.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-})
+// document.body.innerHTML += "<a href='#' id='back-to-top' title=''></a>";
+// const getBTTElm = document.getElementById('back-to-top');
+// document.addEventListener('scroll', ev => {
+//     if (window.scrollY > 150) {
+//         getBTTElm.classList.add('visible');
+//     } else {
+//         getBTTElm.classList.remove('visible');
+//     }
+// });
+// getBTTElm.addEventListener('click', e => {
+//     e.preventDefault();
+//     window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth'
+//     });
+// })
 
 
 
@@ -22,11 +22,11 @@ getBTTElm.addEventListener('click', e => {
 
 // menu function
 
-const getBtn = document.querySelector('.mob-btn');
-console.log(getBtn);
-getBtn.addEventListener('click', e => {
-    document.querySelector('body').classList.toggle('show-menu');
-})
+// const getBtn = document.querySelector('.mob-btn');
+// console.log(getBtn);
+// getBtn.addEventListener('click', e => {
+//     document.querySelector('body').classList.toggle('show-menu');
+// })
 
 
 const getDropDown = document.getElementsByClassName('main-nav');
@@ -47,52 +47,75 @@ getDropDownClick.forEach((item) => {
     })
 })
 
-
-
-
-
-
-
-//animation
-// just "anim" in your element
-window.addEventListener("load", () => {
-    function isInViewport(el, gap) {
-        let top = el.offsetTop;
-        let left = el.offsetLeft;
-        let height = el.offsetHeight;
-        console.log(el.offsetParent);
-        while (el.offsetParent) {
-            el = el.offsetParent;
-            top += el.offsetTop;
-            left += el.offsetLeft;
+// Events Carousel Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const eventsCarousel = document.querySelector('.events-carousel');
+    if (eventsCarousel) {
+        const carouselTrack = eventsCarousel.querySelector('.carousel-track');
+        const indicators = eventsCarousel.querySelectorAll('.carousel-indicators .indicator');
+        const eventCards = carouselTrack.querySelectorAll('.event-card');
+        
+        let currentSlide = 0;
+        const totalSlides = eventCards.length;
+        
+        // Function to update carousel position
+        function updateCarousel() {
+            const cardWidth = eventCards[0].offsetWidth + 24; // width + gap
+            const translateX = -currentSlide * cardWidth;
+            carouselTrack.style.transform = `translateX(${translateX}px)`;
+            
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlide);
+            });
         }
-        return (
-            (window.pageYOffset + window.innerHeight - gap) >= (top) &&
-            (window.pageYOffset) <= (height + top)
-        );
+        
+        // Add click event listeners to indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+            });
+        });
+        
+        // Auto-play functionality (optional)
+        let autoPlayInterval;
+        
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            }, 5000); // Change slide every 5 seconds
+        }
+        
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+        
+        // Start auto-play
+        startAutoPlay();
+        
+        // Pause auto-play on hover
+        eventsCarousel.addEventListener('mouseenter', stopAutoPlay);
+        eventsCarousel.addEventListener('mouseleave', startAutoPlay);
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            updateCarousel();
+        });
+        
+        // Initialize carousel
+        updateCarousel();
     }
-    let getElem = document.querySelectorAll('.anim');
-    //please change as per the design
-    const breakPoints = {
-        desktop: 250,
-        laptop: 80,
-        tab: 50,
-        mobile: 30
-    };
-    let targetGap;
-    window.innerWidth >= 1200 ? targetGap = breakPoints.desktop :
-        window.innerWidth >= 1024 ? targetGap = breakPoints.laptop :
-        window.innerWidth >= 768 ? targetGap = breakPoints.tab :
-        targetGap = breakPoints.mobile;
+});
 
-    function anim() {
-        getElem.forEach(element => {
-            isInViewport(element, targetGap) ? element.classList.add("visible") : null;
-        })
-    }
-    getElem.length > 0 ? (window.addEventListener('scroll', anim, false)) : null;
-    getElem.length > 0 ? anim() : null;
-}, false);
+
+
+
+
+
+
+
 
 
 

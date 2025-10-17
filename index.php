@@ -19,7 +19,7 @@
             <div class="navbar-nav-container">
                 <ul class="navbar-nav d-lg-flex d-block flex-row">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link w-100 d-inline-block dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Our Company <i class="fas fa-chevron-down ms-2"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -30,7 +30,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link w-100 d-inline-block dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Working at Al-Futtaim <i class="fas fa-chevron-down ms-2"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -41,7 +41,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link  w-100 d-inline-block dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             News <i class="fas fa-chevron-down ms-2"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -52,7 +52,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link w-100 d-inline-block dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Policies & Tools <i class="fas fa-chevron-down ms-2"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -186,7 +186,7 @@
                     </div>
                     <div class="row">
                         <!-- Main News Item Column -->
-                        <div class="col-lg-7">
+                        <div class="col-lg-5">
                             <div class="main-news-item">
                                 <div class="news-image">
                                     <img src="assets/images/main-news.png" alt="Main News" class="img-fluid">
@@ -198,11 +198,11 @@
                             </div>
                         </div>
                         <!-- News Thumbnails Column -->
-                        <div class="col-lg-5">
+                        <div class="col-lg-7">
                             <div class="news-list">
                                 <div class="news-item">
                                     <div class="news-thumb">
-                                        <img src="assets/images/main-news.png" alt="News" class="img-fluid">
+                                        <img src="assets/images/news-1.png" alt="News" class="img-fluid">
                                     </div>
                                     <div class="news-text">
                                         <h4>Al-Futtaim Technologies and Johnson Controls Partner to Launch OpenBlue S...</h4>
@@ -211,7 +211,7 @@
                                 </div>
                                 <div class="news-item">
                                     <div class="news-thumb">
-                                        <img src="https://via.placeholder.com/80x80/ffffff/002060?text=Person" alt="News" class="img-fluid">
+                                        <img src="assets/images/news-2.png" alt="News" class="img-fluid">
                                     </div>
                                     <div class="news-text">
                                         <h4>News title goes here, 2 rows max</h4>
@@ -220,7 +220,7 @@
                                 </div>
                                 <div class="news-item">
                                     <div class="news-thumb">
-                                        <img src="https://via.placeholder.com/80x80/ffffff/002060?text=Handshake" alt="News" class="img-fluid">
+                                        <img src="assets/images/news-3.png" alt="News" class="img-fluid">
                                     </div>
                                     <div class="news-text">
                                         <h4>News title goes here, 2 rows max</h4>
@@ -235,7 +235,7 @@
             
             <!-- Al-Futtaim in the Media Column -->
             <div class="col-lg-4">
-                <div class="news-column media-section">
+                <div class="news-column media-section px-0">
                     <div class="section-header d-flex justify-content-between align-items-center">
                         <h2>Al-Futtaim in the Media</h2>
                         <a href="#" class="see-all-link">See all</a>
@@ -266,56 +266,58 @@
 
 <!-- Events & Holidays Section -->
 <section class="events-section">
-    <div class="container">
+    <div class="container overflow-hidden">
         <div class="section-header">
             <h2>Events & Holidays</h2>
+            <a href="#" class="see-all-link">See all</a>
         </div>
         <div class="events-carousel">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="event-card webinar-card">
-                        <div class="event-date">AUG 14</div>
-                        <div class="event-type">Webinar</div>
-                        <h3>LinkedIn AI Training</h3>
-                        <div class="event-details">
-                            <div class="event-time">AUG 14, 10-11 AM</div>
-                            <div class="event-location">Online</div>
-                        </div>
-                        <div class="event-icon">
-                            <i class="fas fa-calendar"></i>
-                        </div>
+            <div class="carousel-track">
+                <a href="#" class="event-card event-card-photo">
+                    <div class="event-image">
+                        <img src="https://dummyimage.com/600x400/ccc/fff" alt="Event" class="img-fluid">
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="event-card event-card-photo">
-                        <div class="event-image">
-                            <img src="https://via.placeholder.com/300x200/ffffff/002060?text=Emirati+Women" alt="Event" class="img-fluid">
-                        </div>
-                        <div class="event-date">AUG 28</div>
-                        <div class="event-type">Event</div>
-                        <h3>Emirati Women's Day</h3>
-                        <div class="event-details">
-                            <div class="event-time">Aug 28, 10-11:30 AM</div>
-                            <div class="event-location">Online</div>
-                        </div>
-                        <div class="event-icon">
-                            <i class="fas fa-calendar"></i>
-                        </div>
+                    <div class="event-date">AUG 28</div>
+                    <div class="event-type">Event</div>
+                    <h3>Emirati Women's Day</h3>
+                    <div class="event-details">
+                        <div class="event-time">Aug 28, 10-11:30 AM</div>
+                        <div class="event-location">Online</div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="event-card holiday-card">
-                        <div class="event-date">SEP 4</div>
-                        <div class="event-type">Holiday</div>
-                        <h3>Prophet Muhammad's Birthday</h3>
-                        <div class="event-details">
-                            <div class="event-time">Sep 4, All day</div>
-                        </div>
-                        <div class="event-icon">
-                            <i class="fas fa-calendar"></i>
-                        </div>
+                    <div class="event-icon">
+                        <i class="fas fa-calendar"></i>
                     </div>
-                </div>
+</a>
+                <a href="#" class="event-card event-card-photo">
+                    <div class="event-image">
+                        <img src="https://dummyimage.com/600x400/ccc/fff" alt="Event" class="img-fluid">
+                    </div>
+                    <div class="event-date">SEP 15</div>
+                    <div class="event-type">Holiday</div>
+                    <h3>National Day Celebration</h3>
+                    <div class="event-details">
+                        <div class="event-time">Sep 15, All Day</div>
+                        <div class="event-location">Various Locations</div>
+                    </div>
+                    <div class="event-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                </a>
+                <a href="#" class="event-card event-card-photo">
+                    <div class="event-image">
+                        <img src="https://dummyimage.com/600x400/ccc/fff" alt="Event" class="img-fluid">
+                    </div>
+                    <div class="event-date">OCT 02</div>
+                    <div class="event-type">Webinar</div>
+                    <h3>Digital Innovation Summit</h3>
+                    <div class="event-details">
+                        <div class="event-time">Oct 2, 2-4 PM</div>
+                        <div class="event-location">Online</div>
+                    </div>
+                    <div class="event-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                </a>
             </div>
             <div class="carousel-indicators">
                 <span class="indicator active"></span>

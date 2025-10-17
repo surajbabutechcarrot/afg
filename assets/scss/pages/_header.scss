@@ -127,7 +127,12 @@
                     align-items: center;
                     position: relative;
                     border-radius: 8px;
-                    
+                    .svg-inline--fa{
+                        @media (max-width: 991.98px) {
+                            margin-left:auto!important;
+                            margin-right:0!important;
+                        }
+                    }
                     &:hover {
                         color: $secondary-color;
                         background-color: rgba($white, 0.1);
@@ -187,7 +192,7 @@
         visibility: hidden;
         transform: translateY(-10px);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        
+        overflow: hidden;
         &.show {
             opacity: 1;
             visibility: visible;
@@ -206,13 +211,13 @@
             border-radius: 0;
             
             &:first-child {
-                border-top-left-radius: 12px;
-                border-top-right-radius: 12px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
             }
             
             &:last-child {
-                border-bottom-left-radius: 12px;
-                border-bottom-right-radius: 12px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
             }
             
             &:hover {
