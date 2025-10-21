@@ -5,8 +5,10 @@
     <div class="container-fluid">
         <!-- Brand -->
         <div class="navbar-brand d-flex align-items-center">
-            <div class="logo-icon"></div>
-            <span class="brand-text">Al-Futtaim Intranet</span>
+            <div class="logo-icon">
+                <img src="assets/images/main-logo.svg" alt="Al-Futtaim Logo">
+            </div>
+            <span class="brand-text">Intranet</span>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -272,120 +274,129 @@
             <a href="#" class="see-all-link">See all</a>
         </div>
         <div class="events-carousel">
-            <div class="carousel-track">
-                <a href="#" class="event-card card-with-content">
-                    <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fm=jpg&q=80&w=1200&fit=crop" referrerpolicy="no-referrer" alt="LinkedIn AI Training" class="img-fluid w-100">
-                        <div class="position-absolute date-badge-wrap bottom-0 start-3">
-                            <h4>AUG</h4>
-                            <h1 class="fw-bold">14</h1>
+            <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-track">
+                            <a href="#" class="event-card card-with-content">
+                                <div class="event-image">
+                                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fm=jpg&q=80&w=1200&fit=crop" referrerpolicy="no-referrer" alt="LinkedIn AI Training" class="img-fluid w-100">
+                                    <div class="position-absolute date-badge-wrap bottom-0 start-3">
+                                        <h4>AUG</h4>
+                                        <h1 class="fw-bold">14</h1>
+                                    </div>
+                                </div>
+                                <div class="card-content p-3">
+                                    <p class="mb-1"><small>Webinar</small></p>
+                                    <h4 class="mb-4">LinkedIn AI Training</h4>
+                                    <div class="event-details">
+                                        <div class="event-time">Aug 14, 10 - 11 AM</div>
+                                        <div class="event-location">Online</div>
+                                    </div>
+                                    <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
+                                </div>
+                            </a>
+                            <a href="#" class="event-card card-with-content">
+                                <div class="event-image">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=80&w=1200&fit=crop&crop=faces" referrerpolicy="no-referrer" alt="Emirati Women's Day" class="img-fluid w-100">
+                                    <div class="position-absolute date-badge-wrap bottom-0 start-3">
+                                        <h4>AUG</h4>
+                                        <h1 class="fw-bold">28</h1>
+                                    </div>
+                                </div>
+                                <div class="card-content p-3">
+                                    <p class="mb-1"><small>Event</small></p>
+                                    <h4 class="mb-4">Emirati Women's Day</h4>
+                                    <div class="event-details">
+                                        <div class="event-time">Aug 28, 10 - 11:30 AM</div>
+                                        <div class="event-location">Online</div>
+                                    </div>
+                                    <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
+                                </div>
+                            </a>
+                            <a href="#" class="event-card card-with-content">
+                                <div class="event-image">
+                                    <img src="assets/images/prophet.jpg" referrerpolicy="no-referrer" alt="Prophet Muhammad's Birthday" class="img-fluid w-100">
+                                    <div class="position-absolute date-badge-wrap bottom-0 start-3">
+                                        <h4>SEP</h4>
+                                        <h1 class="fw-bold">4</h1>
+                                    </div>
+                                </div>
+                                <div class="card-content p-3">
+                                    <p class="mb-1"><small>Holiday</small></p>
+                                    <h4 class="mb-4">Prophet Muhammad's Birthday</h4>
+                                    <div class="event-details">
+                                        <div class="event-time">Sep 4, All day</div>
+                                        <div class="event-location"></div>
+                                    </div>
+                                    <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="card-content p-3">
-                        <p class="mb-1"><small>Webinar</small></p>
-                        <h4 class="mb-4">LinkedIn AI Training</h4>
-                        <div class="event-details">
-                            <div class="event-time">Aug 14, 10 - 11 AM</div>
-                            <div class="event-location">Online</div>
-                        </div>
-                        <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
-                    </div>
-                </a>
-                <a href="#" class="event-card card-with-content">
-                    <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=80&w=1200&fit=crop&crop=faces" referrerpolicy="no-referrer" alt="Emirati Women's Day" class="img-fluid w-100">
-                        <div class="position-absolute date-badge-wrap bottom-0 start-3">
-                            <h4>AUG</h4>
-                            <h1 class="fw-bold">28</h1>
-                        </div>
-                    </div>
-                    <div class="card-content p-3">
-                        <p class="mb-1"><small>Event</small></p>
-                        <h4 class="mb-4">Emirati Women's Day</h4>
-                        <div class="event-details">
-                            <div class="event-time">Aug 28, 10 - 11:30 AM</div>
-                            <div class="event-location">Online</div>
-                        </div>
-                        <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
-                    </div>
-                </a>
-                <a href="#" class="event-card card-with-content">
-                    <div class="event-image">
-                        <img src="assets/images/prophet.jpg" referrerpolicy="no-referrer" alt="Prophet Muhammad's Birthday" class="img-fluid w-100">
-                        <div class="position-absolute date-badge-wrap bottom-0 start-3">
-                            <h4>SEP</h4>
-                            <h1 class="fw-bold">4</h1>
-                        </div>
-                    </div>
-                    <div class="card-content p-3">
-                        <p class="mb-1"><small>Holiday</small></p>
-                        <h4 class="mb-4">Prophet Muhammad's Birthday</h4>
-                        <div class="event-details">
-                            <div class="event-time">Sep 4, All day</div>
-                            <div class="event-location"></div>
-                        </div>
-                        <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
-                    </div>
-                </a>
-                <a href="#" class="event-card card-with-content">
-                    <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fm=jpg&q=80&w=1200&fit=crop" referrerpolicy="no-referrer" alt="LinkedIn AI Training" class="img-fluid w-100">
-                        <div class="position-absolute date-badge-wrap bottom-0 start-3">
-                            <h4>AUG</h4>
-                            <h1 class="fw-bold">14</h1>
-                        </div>
-                    </div>
-                    <div class="card-content p-3">
-                        <p class="mb-1"><small>Webinar</small></p>
-                        <h4 class="mb-4">LinkedIn AI Training</h4>
-                        <div class="event-details">
-                            <div class="event-time">Aug 14, 10 - 11 AM</div>
-                            <div class="event-location">Online</div>
-                        </div>
-                        <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
-                    </div>
-                </a>
-                <a href="#" class="event-card card-with-content">
-                    <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=80&w=1200&fit=crop&crop=faces" referrerpolicy="no-referrer" alt="Emirati Women's Day" class="img-fluid w-100">
-                        <div class="position-absolute date-badge-wrap bottom-0 start-3">
-                            <h4>AUG</h4>
-                            <h1 class="fw-bold">28</h1>
+                    <div class="carousel-item">
+                        <div class="carousel-track">
+                            <a href="#" class="event-card card-with-content">
+                                <div class="event-image">
+                                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fm=jpg&q=80&w=1200&fit=crop" referrerpolicy="no-referrer" alt="LinkedIn AI Training" class="img-fluid w-100">
+                                    <div class="position-absolute date-badge-wrap bottom-0 start-3">
+                                        <h4>AUG</h4>
+                                        <h1 class="fw-bold">14</h1>
+                                    </div>
+                                </div>
+                                <div class="card-content p-3">
+                                    <p class="mb-1"><small>Webinar</small></p>
+                                    <h4 class="mb-4">LinkedIn AI Training</h4>
+                                    <div class="event-details">
+                                        <div class="event-time">Aug 14, 10 - 11 AM</div>
+                                        <div class="event-location">Online</div>
+                                    </div>
+                                    <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
+                                </div>
+                            </a>
+                            <a href="#" class="event-card card-with-content">
+                                <div class="event-image">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=80&w=1200&fit=crop&crop=faces" referrerpolicy="no-referrer" alt="Emirati Women's Day" class="img-fluid w-100">
+                                    <div class="position-absolute date-badge-wrap bottom-0 start-3">
+                                        <h4>AUG</h4>
+                                        <h1 class="fw-bold">28</h1>
+                                    </div>
+                                </div>
+                                <div class="card-content p-3">
+                                    <p class="mb-1"><small>Event</small></p>
+                                    <h4 class="mb-4">Emirati Women's Day</h4>
+                                    <div class="event-details">
+                                        <div class="event-time">Aug 28, 10 - 11:30 AM</div>
+                                        <div class="event-location">Online</div>
+                                    </div>
+                                    <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
+                                </div>
+                            </a>
+                            <a href="#" class="event-card card-with-content">
+                                <div class="event-image">
+                                    <img src="assets/images/prophet.jpg" referrerpolicy="no-referrer" alt="Prophet Muhammad's Birthday" class="img-fluid w-100">
+                                    <div class="position-absolute date-badge-wrap bottom-0 start-3">
+                                        <h4>SEP</h4>
+                                        <h1 class="fw-bold">4</h1>
+                                    </div>
+                                </div>
+                                <div class="card-content p-3">
+                                    <p class="mb-1"><small>Holiday</small></p>
+                                    <h4 class="mb-4">Prophet Muhammad's Birthday</h4>
+                                    <div class="event-details">
+                                        <div class="event-time">Sep 4, All day</div>
+                                        <div class="event-location"></div>
+                                    </div>
+                                    <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="card-content p-3">
-                        <p class="mb-1"><small>Event</small></p>
-                        <h4 class="mb-4">Emirati Women's Day</h4>
-                        <div class="event-details">
-                            <div class="event-time">Aug 28, 10 - 11:30 AM</div>
-                            <div class="event-location">Online</div>
-                        </div>
-                        <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
-                    </div>
-                </a>
-                <a href="#" class="event-card card-with-content">
-                    <div class="event-image">
-                        <img src="assets/images/prophet.jpg" referrerpolicy="no-referrer" alt="Prophet Muhammad's Birthday" class="img-fluid w-100">
-                        <div class="position-absolute date-badge-wrap bottom-0 start-3">
-                            <h4>SEP</h4>
-                            <h1 class="fw-bold">4</h1>
-                        </div>
-                    </div>
-                    <div class="card-content p-3">
-                        <p class="mb-1"><small>Holiday</small></p>
-                        <h4 class="mb-4">Prophet Muhammad's Birthday</h4>
-                        <div class="event-details">
-                            <div class="event-time">Sep 4, All day</div>
-                            <div class="event-location"></div>
-                        </div>
-                        <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-indicators">
-                <span class="indicator active"></span>
-                <span class="indicator"></span>
-                <span class="indicator"></span>
+                </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#eventsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#eventsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
             </div>
         </div>
     </div>
@@ -447,17 +458,36 @@
                         <h2>Employee Offers</h2>
                         <a href="#" class="see-all-link">See all</a>
                     </div>
-                    <div class="offers-card">
-                        <div class="offer-image">
-                            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fm=jpg&fit=crop&w=1280&h=720&q=80" alt="Car Offers">
-                            <div class="offer-overlay">
-                                <div class="offer-title">Car offers</div>
-                                <div class="offer-link">See exclusive offers</div>
+                    <div class="offers-carousel">
+                        <div id="offersCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="offer-card">
+                                        <div class="offer-image">
+                                            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fm=jpg&fit=crop&w=1280&h=720&q=80" alt="Car Offers">
+                                            <div class="offer-overlay">
+                                                <div class="offer-title">Car offers</div>
+                                                <div class="offer-link">See exclusive offers</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="offer-card">
+                                        <div class="offer-image">
+                                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fm=jpg&fit=crop&w=1280&h=720&q=80" alt="Travel Offers">
+                                            <div class="offer-overlay">
+                                                <div class="offer-title">Travel offers</div>
+                                                <div class="offer-link">Explore destinations</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-dots">
-                            <span class="dot active"></span>
-                            <span class="dot"></span>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#offersCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#offersCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -585,7 +615,7 @@
                     <span class="brand-text">Al-Futtaim</span>
                 </div>
             </div>
-            <div class="col-12 col-md-6 order-3 order-md-2">
+            <div class="col-12 col-md-6 order-2 order-md-2">
                 <nav class="footer-nav">
                     <ul class="d-flex justify-content-center flex-wrap gap-3">
                         <li><a href="#">Our Company</a></li>
@@ -595,7 +625,7 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-12 col-md-3 order-2 order-md-3">
+            <div class="col-12 col-md-3 order-3 order-md-3">
                 <div class="footer-right d-flex justify-content-center justify-content-md-end align-items-center flex-wrap gap-3">
                     <div class="social-icons d-flex justify-content-center">
                         <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -614,6 +644,7 @@
     <?php include('includes/footer.php');?>
     <!-- pagescript here... -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 // Add any custom JavaScript here
 </script>

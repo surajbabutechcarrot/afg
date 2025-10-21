@@ -12869,10 +12869,6 @@ body.show-menu .mob-btn span + span + span {
   flex-shrink: 0;
 }
 .top-navbar .navbar-brand .logo-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  border-radius: 8px;
   margin-right: 12px;
   display: flex;
   align-items: center;
@@ -13853,6 +13849,11 @@ html {
 .media-section {
   padding: 60px 0;
 }
+@media (max-width: 991.98px) {
+  .media-section {
+    margin-top: 2.5rem;
+  }
+}
 .media-section .media-list .media-item {
   padding: 20px 0;
   border-bottom: 1px solid #ddd;
@@ -13915,11 +13916,15 @@ html {
   display: flex;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   gap: 24px;
+  max-width: 100%;
 }
 .events-section .events-carousel .event-card {
   text-decoration: none;
   color: inherit;
-  flex: 0 0 calc(33.333% - 16px);
+  flex: 0 0 calc(33.333% - 16px) !important;
+  width: calc(33.333% - 16px) !important;
+  min-width: calc(33.333% - 16px) !important;
+  max-width: calc(33.333% - 16px) !important;
   background: #fff;
   border-radius: 0;
   overflow: hidden;
@@ -14220,47 +14225,57 @@ html {
   z-index: 2;
 }
 .events-section .events-carousel .carousel-indicators {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  margin-top: 40px;
-  padding: 20px 0;
-  width: 100%;
   position: relative;
-  z-index: 10;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 15px 0;
 }
-.events-section .events-carousel .carousel-indicators .indicator {
-  width: 20px;
-  height: 20px;
+.events-section .events-carousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
+  border: 1px solid #323130;
+  background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 1px solid #323130;
-  display: block;
-  visibility: visible;
-  opacity: 1;
-}
-.events-section .events-carousel .carousel-indicators .indicator.active {
-  transform: scale(1.3);
   position: relative;
 }
-.events-section .events-carousel .carousel-indicators .indicator.active:after {
+.events-section .events-carousel .carousel-indicators button:hover {
+  border-color: #181817;
+}
+.events-section .events-carousel .carousel-indicators button.active {
+  border-color: #323130;
+}
+.events-section .events-carousel .carousel-indicators button.active::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  background-color: #0B1F41;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  z-index: -1;
+  background-color: #0B1F41;
 }
 
-@media (max-width: 1200px) {
-  .events-section .events-carousel .event-card {
-    flex: 0 0 calc(50% - 12px);
+@media (max-width: 992px) {
+  .events-section .events-carousel .carousel-inner .carousel-item .carousel-track .event-card {
+    flex: 0 0 calc(50% - 12px) !important;
+    width: calc(50% - 12px) !important;
+    min-width: calc(50% - 12px) !important;
+    max-width: calc(50% - 12px) !important;
+  }
+}
+@media (max-width: 768px) {
+  .events-section .events-carousel .carousel-inner .carousel-item .carousel-track .event-card {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
   }
 }
 @media (max-width: 768px) {
@@ -14283,6 +14298,13 @@ html {
     flex: 0 0 calc(100% - 8px);
     height: 280px;
   }
+}
+@media (max-width: 768px) and (max-width: 991.98px) {
+  .events-section .events-carousel .event-card {
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
   .events-section .events-carousel .event-card.webinar-card, .events-section .events-carousel .event-card.holiday-card {
     padding: 24px;
   }
@@ -14422,23 +14444,29 @@ html {
 .bulletin-offers-section .employee-offers {
   height: 100%;
 }
-.bulletin-offers-section .employee-offers .offers-card {
+.bulletin-offers-section .employee-offers .offers-carousel {
   position: relative;
-  border-radius: 6px;
+  height: 100%;
+  overflow: hidden;
+}
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-inner .carousel-item .offer-card {
+  position: relative;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 32, 96, 0.08);
   height: 100%;
+  width: 100%;
 }
-.bulletin-offers-section .employee-offers .offers-card .offer-image {
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-inner .carousel-item .offer-card .offer-image {
   position: relative;
-  height: 300px;
+  height: 280px;
 }
-.bulletin-offers-section .employee-offers .offers-card .offer-image img {
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-inner .carousel-item .offer-card .offer-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.bulletin-offers-section .employee-offers .offers-card .offer-image .offer-overlay {
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-inner .carousel-item .offer-card .offer-image .offer-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -14446,7 +14474,7 @@ html {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
   padding: 30px 20px 20px;
 }
-.bulletin-offers-section .employee-offers .offers-card .offer-image .offer-overlay .offer-title {
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-inner .carousel-item .offer-card .offer-image .offer-overlay .offer-title {
   font-size: 24px;
   font-weight: 700;
   color: #fff;
@@ -14454,7 +14482,7 @@ html {
   line-height: 1.2;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
-.bulletin-offers-section .employee-offers .offers-card .offer-image .offer-overlay .offer-link {
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-inner .carousel-item .offer-card .offer-image .offer-overlay .offer-link {
   color: #fff;
   font-size: 14px;
   font-weight: 500;
@@ -14463,60 +14491,55 @@ html {
   align-items: center;
   transition: all 0.3s ease;
 }
-.bulletin-offers-section .employee-offers .offers-card .offer-image .offer-overlay .offer-link::after {
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-inner .carousel-item .offer-card .offer-image .offer-overlay .offer-link::after {
   content: "→";
   margin-left: 4px;
   transition: transform 0.3s ease;
   display: inline-block;
 }
-.bulletin-offers-section .employee-offers .offers-card .offer-image .offer-overlay .offer-link:hover {
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-inner .carousel-item .offer-card .offer-image .offer-overlay .offer-link:hover {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
 }
-.bulletin-offers-section .employee-offers .offers-card .offer-image .offer-overlay .offer-link:hover::after {
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-inner .carousel-item .offer-card .offer-image .offer-overlay .offer-link:hover::after {
   transform: translateX(3px);
 }
-.bulletin-offers-section .employee-offers .offers-card .carousel-dots {
-  position: absolute;
-  bottom: 20px;
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-indicators {
+  position: relative;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  z-index: 10;
+  gap: 8px;
+  margin: 0;
+  padding: 15px 0;
 }
-.bulletin-offers-section .employee-offers .offers-card .carousel-dots .dot {
-  width: 20px;
-  height: 20px;
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
+  border: 1px solid #323130;
+  background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  display: block;
-  visibility: visible;
-  opacity: 1;
-}
-.bulletin-offers-section .employee-offers .offers-card .carousel-dots .dot.active {
-  transform: scale(1.3);
   position: relative;
-  border-color: #fff;
 }
-.bulletin-offers-section .employee-offers .offers-card .carousel-dots .dot.active:after {
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-indicators button:hover {
+  border-color: #181817;
+}
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-indicators button.active {
+  border-color: #323130;
+}
+.bulletin-offers-section .employee-offers .offers-carousel .carousel-indicators button.active::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  z-index: -1;
-}
-.bulletin-offers-section .employee-offers .offers-card .carousel-dots .dot:hover {
-  border-color: rgba(255, 255, 255, 0.8);
+  background-color: #0B1F41;
 }
 
 @media (max-width: 992px) {
