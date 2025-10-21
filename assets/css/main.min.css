@@ -12026,6 +12026,14 @@ a {
   color: #0B1F41;
 }
 
+.text-primary {
+  color: #0B1F41 !important;
+}
+
+.text-secondary {
+  color: #666666;
+}
+
 /*  ===============
   1. Reset
 ===============  */
@@ -14468,7 +14476,7 @@ html {
 }
 .bulletin-offers-section .employee-offers .offers-carousel .carousel-inner .carousel-item .offer-card .offer-image {
   position: relative;
-  height: 280px;
+  height: 320px;
 }
 .bulletin-offers-section .employee-offers .offers-carousel .carousel-inner .carousel-item .offer-card .offer-image img {
   width: 100%;
@@ -16138,7 +16146,7 @@ html {
 }
 .division-nav .division-links .division-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: #00aeef;
 }
 .division-nav .division-links .division-link.active {
   background-color: rgba(255, 255, 255, 0.2);
@@ -16163,9 +16171,6 @@ html {
   }
 }
 
-.hero-section .hero-image {
-  margin-bottom: 40px;
-}
 .hero-section .hero-image img {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -16210,7 +16215,6 @@ html {
   color: #fff;
   font-weight: 600;
   padding: 12px 32px;
-  border-radius: 6px;
   font-size: 16px;
   transition: all 0.3s ease;
 }
@@ -16228,7 +16232,6 @@ html {
   margin-bottom: 40px;
 }
 .cityscape-section .cityscape-image img {
-  border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 .cityscape-section .cityscape-image .image-caption {
@@ -16236,6 +16239,7 @@ html {
   color: var(--bs-secondary-color);
   margin-top: 12px;
   font-style: italic;
+  text-align: center;
 }
 .cityscape-section .cityscape-content .cityscape-subtitle {
   font-size: 28px;
