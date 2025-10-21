@@ -1548,8 +1548,8 @@ html {
                         margin-right: 10px;
                         
                         img {
-                            width: 50px;
-                            height: 50px;
+                            width: 75px;
+                            height: 75px;
                         }
                     }
                     
@@ -1682,7 +1682,7 @@ html {
     
     .section-header {
         margin-bottom: 50px;
-        
+        gap: 15px;
         .header-left {
             h2 {
                 color: $white;
@@ -1856,13 +1856,7 @@ html {
             align-items: center;
             justify-content: center;
             position: relative;
-            
-            &::before {
-                content: "AF";
-                color: $white;
-                font-weight: 700;
-                font-size: 12px;
-            }
+
         }
         
         .brand-text {
@@ -2129,6 +2123,7 @@ html {
             justify-content: center;
             margin-top: 20px;
             gap: 15px;
+            align-items: start;
             
             .icon-item {
                 .icon-circle {
@@ -2185,7 +2180,7 @@ html {
     
     .hero-section {
         .hero-cards {
-            margin-top: 30px;
+            margin-top: 0px;
         }
     }
     
