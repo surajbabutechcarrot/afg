@@ -354,7 +354,9 @@
 
 body {
     &.show-menu {
-        overflow: hidden;
+        // keep scrollbar to avoid layout shift when menu opens
+        overflow-y: scroll;
+        scrollbar-gutter: stable both-edges;
         background: $white;
         .mob-btn {
             // opacity: 0;

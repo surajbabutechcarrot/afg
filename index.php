@@ -19,7 +19,7 @@
             <div class="navbar-nav-container">
                 <ul class="navbar-nav d-lg-flex d-block flex-row">
                     <li class="nav-item dropdown">
-                        <a class="nav-link w-100 d-inline-block dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link w-100 d-inline-flex dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Our Company <i class="fas fa-chevron-down ms-2"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -30,7 +30,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link w-100 d-inline-block dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link w-100 d-inline-flex dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Working at Al-Futtaim <i class="fas fa-chevron-down ms-2"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -41,7 +41,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link  w-100 d-inline-block dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link  w-100 d-inline-flex dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             News <i class="fas fa-chevron-down ms-2"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -52,7 +52,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link w-100 d-inline-block dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link w-100 d-inline-flex dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Policies & Tools <i class="fas fa-chevron-down ms-2"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -187,7 +187,7 @@
                     <div class="row">
                         <!-- Main News Item Column -->
                         <div class="col-lg-5">
-                            <div class="main-news-item">
+                            <a href="#" class="main-news-item">
                                 <div class="news-image">
                                     <img src="assets/images/main-news.png" alt="Main News" class="img-fluid">
                                 </div>
@@ -195,7 +195,7 @@
                                     <h3>News title goes here, 2 rows max</h3>
                                     <p>Description goes here, 2 row max</p>
                                 </div>
-                            </div>
+</a>
                         </div>
                         <!-- News Thumbnails Column -->
                         <div class="col-lg-7">
@@ -273,49 +273,112 @@
         </div>
         <div class="events-carousel">
             <div class="carousel-track">
-                <a href="#" class="event-card event-card-photo">
+                <a href="#" class="event-card card-with-content">
                     <div class="event-image">
-                        <img src="https://dummyimage.com/600x400/ccc/fff" alt="Event" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fm=jpg&q=80&w=1200&fit=crop" referrerpolicy="no-referrer" alt="LinkedIn AI Training" class="img-fluid w-100">
+                        <div class="position-absolute date-badge-wrap bottom-0 start-3">
+                            <h4>AUG</h4>
+                            <h1 class="fw-bold">14</h1>
+                        </div>
                     </div>
-                    <div class="event-date">AUG 28</div>
-                    <div class="event-type">Event</div>
-                    <h3>Emirati Women's Day</h3>
-                    <div class="event-details">
-                        <div class="event-time">Aug 28, 10-11:30 AM</div>
-                        <div class="event-location">Online</div>
-                    </div>
-                    <div class="event-icon">
-                        <i class="fas fa-calendar"></i>
-                    </div>
-</a>
-                <a href="#" class="event-card event-card-photo">
-                    <div class="event-image">
-                        <img src="https://dummyimage.com/600x400/ccc/fff" alt="Event" class="img-fluid">
-                    </div>
-                    <div class="event-date">SEP 15</div>
-                    <div class="event-type">Holiday</div>
-                    <h3>National Day Celebration</h3>
-                    <div class="event-details">
-                        <div class="event-time">Sep 15, All Day</div>
-                        <div class="event-location">Various Locations</div>
-                    </div>
-                    <div class="event-icon">
-                        <i class="fas fa-calendar"></i>
+                    <div class="card-content p-3">
+                        <p class="mb-1"><small>Webinar</small></p>
+                        <h4 class="mb-4">LinkedIn AI Training</h4>
+                        <div class="event-details">
+                            <div class="event-time">Aug 14, 10 - 11 AM</div>
+                            <div class="event-location">Online</div>
+                        </div>
+                        <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
                     </div>
                 </a>
-                <a href="#" class="event-card event-card-photo">
+                <a href="#" class="event-card card-with-content">
                     <div class="event-image">
-                        <img src="https://dummyimage.com/600x400/ccc/fff" alt="Event" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=80&w=1200&fit=crop&crop=faces" referrerpolicy="no-referrer" alt="Emirati Women's Day" class="img-fluid w-100">
+                        <div class="position-absolute date-badge-wrap bottom-0 start-3">
+                            <h4>AUG</h4>
+                            <h1 class="fw-bold">28</h1>
+                        </div>
                     </div>
-                    <div class="event-date">OCT 02</div>
-                    <div class="event-type">Webinar</div>
-                    <h3>Digital Innovation Summit</h3>
-                    <div class="event-details">
-                        <div class="event-time">Oct 2, 2-4 PM</div>
-                        <div class="event-location">Online</div>
+                    <div class="card-content p-3">
+                        <p class="mb-1"><small>Event</small></p>
+                        <h4 class="mb-4">Emirati Women's Day</h4>
+                        <div class="event-details">
+                            <div class="event-time">Aug 28, 10 - 11:30 AM</div>
+                            <div class="event-location">Online</div>
+                        </div>
+                        <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
                     </div>
-                    <div class="event-icon">
-                        <i class="fas fa-calendar"></i>
+                </a>
+                <a href="#" class="event-card card-with-content">
+                    <div class="event-image">
+                        <img src="assets/images/prophet.jpg" referrerpolicy="no-referrer" alt="Prophet Muhammad's Birthday" class="img-fluid w-100">
+                        <div class="position-absolute date-badge-wrap bottom-0 start-3">
+                            <h4>SEP</h4>
+                            <h1 class="fw-bold">4</h1>
+                        </div>
+                    </div>
+                    <div class="card-content p-3">
+                        <p class="mb-1"><small>Holiday</small></p>
+                        <h4 class="mb-4">Prophet Muhammad's Birthday</h4>
+                        <div class="event-details">
+                            <div class="event-time">Sep 4, All day</div>
+                            <div class="event-location"></div>
+                        </div>
+                        <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
+                    </div>
+                </a>
+                <a href="#" class="event-card card-with-content">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fm=jpg&q=80&w=1200&fit=crop" referrerpolicy="no-referrer" alt="LinkedIn AI Training" class="img-fluid w-100">
+                        <div class="position-absolute date-badge-wrap bottom-0 start-3">
+                            <h4>AUG</h4>
+                            <h1 class="fw-bold">14</h1>
+                        </div>
+                    </div>
+                    <div class="card-content p-3">
+                        <p class="mb-1"><small>Webinar</small></p>
+                        <h4 class="mb-4">LinkedIn AI Training</h4>
+                        <div class="event-details">
+                            <div class="event-time">Aug 14, 10 - 11 AM</div>
+                            <div class="event-location">Online</div>
+                        </div>
+                        <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
+                    </div>
+                </a>
+                <a href="#" class="event-card card-with-content">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=80&w=1200&fit=crop&crop=faces" referrerpolicy="no-referrer" alt="Emirati Women's Day" class="img-fluid w-100">
+                        <div class="position-absolute date-badge-wrap bottom-0 start-3">
+                            <h4>AUG</h4>
+                            <h1 class="fw-bold">28</h1>
+                        </div>
+                    </div>
+                    <div class="card-content p-3">
+                        <p class="mb-1"><small>Event</small></p>
+                        <h4 class="mb-4">Emirati Women's Day</h4>
+                        <div class="event-details">
+                            <div class="event-time">Aug 28, 10 - 11:30 AM</div>
+                            <div class="event-location">Online</div>
+                        </div>
+                        <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
+                    </div>
+                </a>
+                <a href="#" class="event-card card-with-content">
+                    <div class="event-image">
+                        <img src="assets/images/prophet.jpg" referrerpolicy="no-referrer" alt="Prophet Muhammad's Birthday" class="img-fluid w-100">
+                        <div class="position-absolute date-badge-wrap bottom-0 start-3">
+                            <h4>SEP</h4>
+                            <h1 class="fw-bold">4</h1>
+                        </div>
+                    </div>
+                    <div class="card-content p-3">
+                        <p class="mb-1"><small>Holiday</small></p>
+                        <h4 class="mb-4">Prophet Muhammad's Birthday</h4>
+                        <div class="event-details">
+                            <div class="event-time">Sep 4, All day</div>
+                            <div class="event-location"></div>
+                        </div>
+                        <div class="event-icon"><i class="fas fa-calendar-plus"></i></div>
                     </div>
                 </a>
             </div>
@@ -328,71 +391,76 @@
     </div>
 </section>
 
-<!-- Bulletin Board Section -->
-<section class="bulletin-section">
+<!-- Bulletin Board & Employee Offers Section -->
+<section class="bulletin-offers-section">
     <div class="container">
-        <div class="section-header d-flex justify-content-between align-items-center">
-            <h2>Bulletin Board</h2>
-            <a href="#" class="see-all-link">See all</a>
-        </div>
-        <div class="bulletin-list">
-            <div class="bulletin-item">
-                <div class="bulletin-thumb">
-                    <img src="https://via.placeholder.com/60x60/ffffff/002060?text=IT" alt="IT Update" class="img-fluid">
-                </div>
-                <div class="bulletin-content">
-                    <span class="bulletin-category">IT Update</span>
-                    <h4>MFA Authentication</h4>
-                    <p>Enhanced security via multi-factor authentication</p>
-                    <span class="bulletin-date">August 15</span>
-                </div>
-            </div>
-            <div class="bulletin-item">
-                <div class="bulletin-thumb">
-                    <img src="https://via.placeholder.com/60x60/ffffff/002060?text=HR" alt="HR Info" class="img-fluid">
-                </div>
-                <div class="bulletin-content">
-                    <span class="bulletin-category">HR Info</span>
-                    <h4>PeopleHub New Features</h4>
-                    <p>Discover the latest enhancements in PeopleHub</p>
-                    <span class="bulletin-date">August 11</span>
-                </div>
-            </div>
-            <div class="bulletin-item">
-                <div class="bulletin-thumb">
-                    <img src="https://via.placeholder.com/60x60/ffffff/002060?text=News" alt="People News" class="img-fluid">
-                </div>
-                <div class="bulletin-content">
-                    <span class="bulletin-category">People News</span>
-                    <h4>Head of Automotive</h4>
-                    <p>Leading with innovation and growth</p>
-                    <span class="bulletin-date">August 7</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Employee Offers Section -->
-<section class="offers-section">
-    <div class="container">
-        <div class="section-header d-flex justify-content-between align-items-center">
-            <h2>Employee Offers</h2>
-            <a href="#" class="see-all-link">See all</a>
-        </div>
-        <div class="offers-carousel">
-            <div class="offer-card">
-                <div class="offer-image">
-                    <img src="https://via.placeholder.com/600x300/ffffff/002060?text=Car+Key" alt="Car Offers" class="img-fluid">
-                </div>
-                <div class="offer-overlay">
-                    <h3>Car offers</h3>
-                    <a href="#" class="offer-link">See exclusive offers →</a>
+        <div class="row g-4">
+            <!-- Bulletin Board Column -->
+            <div class="col-12 col-lg-6">
+                <div class="bulletin-board">
+                    <div class="section-header">
+                        <h2>Bulletin Board</h2>
+                        <a href="#" class="see-all-link">See all</a>
+                    </div>
+                    <div class="bulletin-items">
+                        <div class="bulletin-item">
+                            <div class="item-image">
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&crop=faces&w=120&h=120&q=80" alt="IT Support Agent on call">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-category">IT Update</div>
+                                <div class="item-title">MFA Authentication</div>
+                                <div class="item-description">Enhanced security via multi-factor authentication</div>
+                                <div class="item-date">August 15</div>
+                            </div>
+                        </div>
+                        <div class="bulletin-item">
+                            <div class="item-image">
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fm=jpg&fit=crop&w=120&h=120&q=80" alt="PeopleHub dashboard preview">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-category">HR Info</div>
+                                <div class="item-title">PeopleHub New Features</div>
+                                <div class="item-description">Discover the latest enhancements in PeopleHub</div>
+                                <div class="item-date">August 11</div>
+                            </div>
+                        </div>
+                        <div class="bulletin-item">
+                            <div class="item-image">
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?auto=format&fm=jpg&fit=crop&crop=faces&w=120&h=120&q=80" alt="Head of Automotive portrait">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-category">People News</div>
+                                <div class="item-title">Head of Automotive</div>
+                                <div class="item-description">Leading with innovation and growth</div>
+                                <div class="item-date">August 7</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-indicators">
-                <span class="indicator active"></span>
-                <span class="indicator"></span>
+            
+            <!-- Employee Offers Column -->
+            <div class="col-12 col-lg-6">
+                <div class="employee-offers">
+                    <div class="section-header">
+                        <h2>Employee Offers</h2>
+                        <a href="#" class="see-all-link">See all</a>
+                    </div>
+                    <div class="offers-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fm=jpg&fit=crop&w=1280&h=720&q=80" alt="Car Offers">
+                            <div class="offer-overlay">
+                                <div class="offer-title">Car offers</div>
+                                <div class="offer-link">See exclusive offers</div>
+                            </div>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -401,16 +469,20 @@
 <!-- Divisions News Section -->
 <section class="divisions-section">
     <div class="container">
-        <div class="section-header">
-            <h2>Divisions News on Viva Engage</h2>
-            <p>Stay informed with the latest news that is specifically tailored to your division. Never miss out on important updates that matter most to you.</p>
+        <div class="section-header d-flex justify-content-between align-items-start">
+            <div class="header-left">
+                <h2>Divisions News on Viva Engage</h2>
+            </div>
+            <div class="header-right">
+                <p>Stay informed with the latest news that is specifically tailored to your division. Never miss out on important updates that matter most to you.</p>
+            </div>
         </div>
         <div class="divisions-grid">
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="division-card">
                         <div class="division-image">
-                            <img src="https://via.placeholder.com/300x200/ffffff/002060?text=Sports+Car" alt="Automotive" class="img-fluid">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop&crop=center" alt="Automotive" class="img-fluid">
                         </div>
                         <div class="division-bar">
                             <span>Automotive <i class="fas fa-chevron-right"></i></span>
@@ -420,7 +492,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="division-card">
                         <div class="division-image">
-                            <img src="https://via.placeholder.com/300x200/ffffff/002060?text=Medical+Team" alt="Health" class="img-fluid">
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center" alt="Health" class="img-fluid">
                         </div>
                         <div class="division-bar">
                             <span>Health <i class="fas fa-chevron-right"></i></span>
@@ -430,7 +502,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="division-card">
                         <div class="division-image">
-                            <img src="https://via.placeholder.com/300x200/ffffff/002060?text=Orient" alt="Orient" class="img-fluid">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop&crop=center" alt="Orient" class="img-fluid">
                         </div>
                         <div class="division-bar">
                             <span>Orient <i class="fas fa-chevron-right"></i></span>
@@ -440,7 +512,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="division-card">
                         <div class="division-image">
-                            <img src="https://via.placeholder.com/300x200/ffffff/002060?text=Building" alt="Real Estate" class="img-fluid">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=250&fit=crop&crop=center" alt="Real Estate" class="img-fluid">
                         </div>
                         <div class="division-bar">
                             <span>Real Estate <i class="fas fa-chevron-right"></i></span>
@@ -450,7 +522,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="division-card">
                         <div class="division-image">
-                            <img src="https://via.placeholder.com/300x200/ffffff/002060?text=Retail" alt="Retail" class="img-fluid">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=250&fit=crop&crop=center" alt="Retail" class="img-fluid">
                         </div>
                         <div class="division-bar">
                             <span>Retail <i class="fas fa-chevron-right"></i></span>
@@ -460,7 +532,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="division-card">
                         <div class="division-image">
-                            <img src="https://via.placeholder.com/300x200/ffffff/002060?text=School" alt="Schools" class="img-fluid">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=250&fit=crop&crop=center" alt="Schools" class="img-fluid">
                         </div>
                         <div class="division-bar">
                             <span>Schools <i class="fas fa-chevron-right"></i></span>
@@ -479,48 +551,43 @@
             <div class="col-lg-6">
                 <div class="brand-assets-card">
                     <div class="card-image">
-                        <img src="https://via.placeholder.com/500x300/ffffff/002060?text=Brand+Assets" alt="Brand Assets" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop&crop=center" alt="Brand Assets" class="img-fluid">
                     </div>
                     <div class="card-content">
                         <h3>Brand Assets & Templates</h3>
-                        <a href="#" class="card-link">Action →</a>
+                        <a href="#" class="card-link">Action</a>
                     </div>
-                    <div class="qr-code">
-                        <div class="qr-image">
-                            <img src="https://via.placeholder.com/80x80/ffffff/002060?text=QR" alt="QR Code" class="img-fluid">
-                        </div>
-                        <p>Scan our QR code to find all brand assets</p>
-                    </div>
+                    
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="handbook-card">
                     <div class="card-image">
-                        <img src="https://via.placeholder.com/500x300/ffffff/002060?text=Employee+Handbook" alt="Employee Handbook" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&h=300&fit=crop&crop=center" alt="Employee Handbook" class="img-fluid">
                     </div>
                     <div class="card-content">
                         <h3>Employee Handbook</h3>
-                        <a href="#" class="card-link">Action →</a>
+                        <a href="#" class="card-link">Action</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </section>
+</section>
 
 <!-- Footer -->
 <footer class="main-footer">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-3">
+        <div class="row align-items-center gy-3 gy-md-0">
+            <div class="col-12 col-md-3 order-1 order-md-1 d-flex justify-content-center justify-content-md-start">
                 <div class="footer-logo">
                     <div class="logo-icon"></div>
                     <span class="brand-text">Al-Futtaim</span>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-12 col-md-6 order-3 order-md-2">
                 <nav class="footer-nav">
-                    <ul class="d-flex justify-content-center">
+                    <ul class="d-flex justify-content-center flex-wrap gap-3">
                         <li><a href="#">Our Company</a></li>
                         <li><a href="#">Working at Al-Futtaim</a></li>
                         <li><a href="#">News</a></li>
@@ -528,16 +595,16 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-md-3">
-                <div class="footer-right d-flex justify-content-end align-items-center">
-                    <span class="copyright">© 2025 Al-Futtaim. All rights reserved.</span>
-                    <div class="social-icons">
+            <div class="col-12 col-md-3 order-2 order-md-3">
+                <div class="footer-right d-flex justify-content-center justify-content-md-end align-items-center flex-wrap gap-3">
+                    <div class="social-icons d-flex justify-content-center">
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-microsoft"></i></a>
                     </div>
+                    <span class="copyright text-center text-md-end w-100">© 2025 Al-Futtaim. All rights reserved.</span>
                 </div>
             </div>
         </div>

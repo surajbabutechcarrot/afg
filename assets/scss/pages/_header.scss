@@ -53,6 +53,13 @@
         border: none;
         padding: 4px 8px;
         background: transparent;
+        outline: none;
+        box-shadow: none;
+        &:focus,
+        &:active {
+            outline: none;
+            box-shadow: none;
+        }
         
         .navbar-toggler-icon {
             background-image: none;
@@ -95,6 +102,8 @@
     // Collapsible Navigation
     .navbar-collapse {
         flex-grow: 1;
+        will-change: transform;
+        transform: translateZ(0);
         
         .navbar-nav-container {
             flex: 1;

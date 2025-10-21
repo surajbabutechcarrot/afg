@@ -12,6 +12,8 @@ $light-gray: #F5F5F5 !default; // Section backgrounds
 $medium-gray: #666666 !default; // Secondary text
 $dark-gray: #333333 !default; // Primary text
 $border-gray: #ddd !default;
+$midnight-dark: #323130 !default;
+$midnight-light: #0B1F41 !default;
 
 // Custom colors for specific elements
 $welcome-bg: $dark-blue !default;
@@ -122,4 +124,24 @@ $filter-z:99;
     margin-left: auto!important;
     margin-right: auto!important;
   }
-  
+  .see-all-link{
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0px;
+      height: 1px;
+      background-color: $secondary-color;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      &:before {
+        background-color: $dark-blue;
+        width: 100%!important;
+      }
+    }
+  }
+  a{
+    text-decoration: none;
+  }

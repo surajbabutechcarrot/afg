@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         let currentSlide = 0;
         const totalSlides = eventCards.length;
+        let isTransitioning = false;
         
         // Function to update carousel position
         function updateCarousel() {
@@ -70,21 +71,53 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
+        // Function to go to next slide with loop
+        function nextSlide() {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+            
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 300);
+        }
+        
+        // Function to go to previous slide with loop
+        function prevSlide() {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+            
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 300);
+        }
+        
         // Add click event listeners to indicators
         indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                
                 currentSlide = index;
                 updateCarousel();
+                
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 300);
             });
         });
         
-        // Auto-play functionality (optional)
+        // Auto-play functionality with loop
         let autoPlayInterval;
         
         function startAutoPlay() {
             autoPlayInterval = setInterval(() => {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateCarousel();
+                nextSlide();
             }, 5000); // Change slide every 5 seconds
         }
         
@@ -98,6 +131,32 @@ document.addEventListener('DOMContentLoaded', function() {
         // Pause auto-play on hover
         eventsCarousel.addEventListener('mouseenter', stopAutoPlay);
         eventsCarousel.addEventListener('mouseleave', startAutoPlay);
+        
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+        
+        carouselTrack.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        
+        carouselTrack.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            const threshold = 50;
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    nextSlide(); // Swipe left - next slide
+                } else {
+                    prevSlide(); // Swipe right - previous slide
+                }
+            }
+        }
         
         // Handle window resize
         window.addEventListener('resize', () => {
