@@ -36,7 +36,7 @@ $text-4xl: 32px !default;
 $text-5xl: 36px !default;
 
 // Font Family - Neue Montreal
-$font-family: 'Neue Montreal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !default;
+$font-family: 'Neue Montreal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 $d-ico: 'deafult-icons' !default;
 //button
 $font-light:300;
@@ -145,3 +145,9 @@ $filter-z:99;
   a{
     text-decoration: none;
   }
+.mid-dark-color{
+  color: $midnight-dark;
+}
+.mid-light-color{
+  color: $midnight-light;
+}

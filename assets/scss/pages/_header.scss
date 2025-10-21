@@ -41,6 +41,7 @@
         
         .brand-text {
             color: $white;
+            font-weight: 100;
         }
     }
     
@@ -275,6 +276,18 @@
             border-top: 1px solid rgba($white, 0.1);
             padding: 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1050;
+            
+            // Ensure Bootstrap collapse works properly
+            &.collapse:not(.show) {
+                display: none;
+            }
+            
+            &.collapsing {
+                height: 0;
+                overflow: hidden;
+                transition: height 0.35s ease;
+            }
             
             .navbar-nav-container {
                 margin: 0;
@@ -360,8 +373,6 @@
         
         .navbar-brand {
             .logo-icon {
-                width: 38px; // Slightly smaller logo
-                height: 38px;
                 
                 &::before {
                     font-size: 13px; // Adjusted logo text

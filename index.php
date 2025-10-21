@@ -21,10 +21,10 @@
             <div class="navbar-nav-container">
                 <ul class="navbar-nav d-lg-flex d-block flex-row">
                     <li class="nav-item dropdown">
-                        <a class="nav-link w-100 d-inline-flex dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link w-100 d-inline-flex dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-target="#ourCompanyDropdown" aria-expanded="false">
                             Our Company <i class="fas fa-chevron-down ms-2"></i>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" id="ourCompanyDropdown">
                             <li><a class="dropdown-item" href="#">About Us</a></li>
                             <li><a class="dropdown-item" href="#">Leadership</a></li>
                             <li><a class="dropdown-item" href="#">History</a></li>
@@ -32,10 +32,10 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link w-100 d-inline-flex dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link w-100 d-inline-flex dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-target="#workingDropdown" aria-expanded="false">
                             Working at Al-Futtaim <i class="fas fa-chevron-down ms-2"></i>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" id="workingDropdown">
                             <li><a class="dropdown-item" href="#">Career Development</a></li>
                             <li><a class="dropdown-item" href="#">Benefits</a></li>
                             <li><a class="dropdown-item" href="#">Training Programs</a></li>
@@ -43,10 +43,10 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link  w-100 d-inline-flex dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link  w-100 d-inline-flex dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-target="#newsDropdown" aria-expanded="false">
                             News <i class="fas fa-chevron-down ms-2"></i>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" id="newsDropdown">
                             <li><a class="dropdown-item" href="#">Company News</a></li>
                             <li><a class="dropdown-item" href="#">Industry Updates</a></li>
                             <li><a class="dropdown-item" href="#">Press Releases</a></li>
@@ -54,10 +54,10 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link w-100 d-inline-flex dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link w-100 d-inline-flex dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-target="#policiesDropdown" aria-expanded="false">
                             Policies & Tools <i class="fas fa-chevron-down ms-2"></i>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" id="policiesDropdown">
                             <li><a class="dropdown-item" href="#">HR Policies</a></li>
                             <li><a class="dropdown-item" href="#">IT Policies</a></li>
                             <li><a class="dropdown-item" href="#">Business Tools</a></li>
@@ -119,11 +119,11 @@
                         <span>Viva Engage</span>
                     </div>
                     <div class="icon-item dropdown">
-                        <div class="icon-circle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" role="button" id="moreDropdown">
+                        <div class="icon-circle dropdown-toggle" data-bs-toggle="dropdown" data-bs-target="#moreDropdown" aria-expanded="false" role="button" id="moreDropdownToggle">
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <span>More</span>
-                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                        <ul class="dropdown-menu" id="moreDropdown" aria-labelledby="moreDropdownToggle">
                             <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Settings</a></li>
                             <li><a class="dropdown-item" href="#"><i class="fas fa-question-circle me-2"></i> Help</a></li>
                             <li><a class="dropdown-item" href="#"><i class="fas fa-download me-2"></i> Downloads</a></li>
@@ -288,7 +288,7 @@
                                 </div>
                                 <div class="card-content p-3">
                                     <p class="mb-1"><small>Webinar</small></p>
-                                    <h4 class="mb-4">LinkedIn AI Training</h4>
+                                    <h4 class="mb-4 mid-dark-color">LinkedIn AI Training</h4>
                                     <div class="event-details">
                                         <div class="event-time">Aug 14, 10 - 11 AM</div>
                                         <div class="event-location">Online</div>
@@ -306,7 +306,7 @@
                                 </div>
                                 <div class="card-content p-3">
                                     <p class="mb-1"><small>Event</small></p>
-                                    <h4 class="mb-4">Emirati Women's Day</h4>
+                                    <h4 class="mb-4 mid-dark-color">Emirati Women's Day</h4>
                                     <div class="event-details">
                                         <div class="event-time">Aug 28, 10 - 11:30 AM</div>
                                         <div class="event-location">Online</div>
@@ -324,7 +324,7 @@
                                 </div>
                                 <div class="card-content p-3">
                                     <p class="mb-1"><small>Holiday</small></p>
-                                    <h4 class="mb-4">Prophet Muhammad's Birthday</h4>
+                                    <h4 class="mb-4 mid-dark-color">Prophet Muhammad's Birthday</h4>
                                     <div class="event-details">
                                         <div class="event-time">Sep 4, All day</div>
                                         <div class="event-location"></div>
@@ -346,7 +346,7 @@
                                 </div>
                                 <div class="card-content p-3">
                                     <p class="mb-1"><small>Webinar</small></p>
-                                    <h4 class="mb-4">LinkedIn AI Training</h4>
+                                    <h4 class="mb-4 mid-dark-color">LinkedIn AI Training</h4>
                                     <div class="event-details">
                                         <div class="event-time">Aug 14, 10 - 11 AM</div>
                                         <div class="event-location">Online</div>
@@ -364,7 +364,7 @@
                                 </div>
                                 <div class="card-content p-3">
                                     <p class="mb-1"><small>Event</small></p>
-                                    <h4 class="mb-4">Emirati Women's Day</h4>
+                                    <h4 class="mb-4 mid-dark-color">Emirati Women's Day</h4>
                                     <div class="event-details">
                                         <div class="event-time">Aug 28, 10 - 11:30 AM</div>
                                         <div class="event-location">Online</div>
@@ -382,7 +382,7 @@
                                 </div>
                                 <div class="card-content p-3">
                                     <p class="mb-1"><small>Holiday</small></p>
-                                    <h4 class="mb-4">Prophet Muhammad's Birthday</h4>
+                                    <h4 class="mb-4 mid-dark-color">Prophet Muhammad's Birthday</h4>
                                     <div class="event-details">
                                         <div class="event-time">Sep 4, All day</div>
                                         <div class="event-location"></div>
@@ -611,8 +611,10 @@
         <div class="row align-items-center gy-3 gy-md-0">
             <div class="col-12 col-md-3 order-1 order-md-1 d-flex justify-content-center justify-content-md-start">
                 <div class="footer-logo">
-                    <div class="logo-icon"></div>
-                    <span class="brand-text">Al-Futtaim</span>
+                    <div class="logo-icon">
+                        <img src="assets/images/footer-logo.svg" alt="Al-Futtaim Logo">
+                    </div>
+                    <!-- <span class="brand-text">Al-Futtaim</span> -->
                 </div>
             </div>
             <div class="col-12 col-md-6 order-2 order-md-2">
@@ -644,9 +646,9 @@
     <?php include('includes/footer.php');?>
     <!-- pagescript here... -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-// Add any custom JavaScript here
+// No custom JavaScript - let Bootstrap handle everything natively
 </script>
     <!-- End pagescript here... -->
 </body>

@@ -154,9 +154,10 @@ html {
         }
         
         p {
-            font-size: $text-lg;
+            font-size: size(16);
             margin: 0;
             color: rgba($white, 0.9);
+            font-weight: 400;
         }
     }
     
@@ -1129,8 +1130,8 @@ html {
             padding: 15px 0;
             
             button {
-                width: 12px;
-                height: 12px;
+                width: 20px;
+                height: 20px;
                 border-radius: 50%;
                 border: 1px solid $midnight-dark;
                 background: transparent;
@@ -1151,8 +1152,8 @@ html {
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
-                        width: 6px;
-                        height: 6px;
+                        width: 10px;
+                        height: 10px;
                         border-radius: 50%;
                         background-color: $midnight-light;
                     }
@@ -1487,8 +1488,8 @@ html {
                 padding: 15px 0;
                 
                 button {
-                    width: 12px;
-                    height: 12px;
+                    width: 20px;
+                    height: 20px;
                     border-radius: 50%;
                     border: 1px solid $midnight-dark;
                     background: transparent;
@@ -1509,8 +1510,8 @@ html {
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%);
-                            width: 6px;
-                            height: 6px;
+                            width: 10px;
+                            height: 10px;
                             border-radius: 50%;
                             background-color: $midnight-light;
                         }
@@ -1714,7 +1715,7 @@ html {
                 box-shadow: 0 8px 32px rgba(0, 32, 96, 0.2);
                 
                 .division-bar {
-                    background-color: $dark-blue;
+                    background-color: $midnight-light;
                 }
             }
             
@@ -1850,10 +1851,6 @@ html {
         align-items: center;
         
         .logo-icon {
-            width: 35px;
-            height: 35px;
-            background-color: $dark-blue;
-            border-radius: 6px;
             margin-right: 10px;
             display: flex;
             align-items: center;
@@ -1888,7 +1885,9 @@ html {
                     text-decoration: none;
                     font-size: $text-md;
                     font-weight: 500;
-                    
+                    @include max(1280) {
+                        font-size: $text-sm;
+                    }
                     &:hover {
                         color: $secondary-color;
                     }
@@ -2244,7 +2243,6 @@ html {
     // Small screens fine-tuning
     @media (max-width: 576px) {
         .main-footer {
-            .footer-logo .logo-icon { width: 32px; height: 32px; }
             .footer-logo .brand-text { font-size: 16px; }
             .footer-right .social-icons { gap: 10px; }
         }

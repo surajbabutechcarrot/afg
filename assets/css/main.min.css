@@ -71,7 +71,7 @@
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: "Neue Montreal", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -12018,6 +12018,14 @@ a {
   text-decoration: none;
 }
 
+.mid-dark-color {
+  color: #323130;
+}
+
+.mid-light-color {
+  color: #0B1F41;
+}
+
 /*  ===============
   1. Reset
 ===============  */
@@ -12883,6 +12891,7 @@ body.show-menu .mob-btn span + span + span {
 }
 .top-navbar .navbar-brand .brand-text {
   color: #fff;
+  font-weight: 100;
 }
 .top-navbar .navbar-toggler {
   border: none;
@@ -13078,6 +13087,15 @@ body.show-menu .mob-btn span + span + span {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
+  }
+  .top-navbar .navbar-collapse.collapse:not(.show) {
+    display: none;
+  }
+  .top-navbar .navbar-collapse.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
   }
   .top-navbar .navbar-collapse .navbar-nav-container {
     margin: 0;
@@ -13144,10 +13162,6 @@ body.show-menu .mob-btn span + span + span {
   }
   .top-navbar .container-fluid, .top-navbar .container-sm, .top-navbar .container-md, .top-navbar .container-lg, .top-navbar .container-xl, .top-navbar .container-xxl {
     padding: 0 18px;
-  }
-  .top-navbar .navbar-brand .logo-icon {
-    width: 38px;
-    height: 38px;
   }
   .top-navbar .navbar-brand .logo-icon::before {
     font-size: 13px;
@@ -13237,7 +13251,7 @@ body.show-menu .mob-btn span + span + span {
   }
 }
 body {
-  font-family: "Neue Montreal", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "Neue Montreal", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-size: 16px;
   line-height: 1.6;
   color: #333333;
@@ -13375,9 +13389,10 @@ html {
   color: #fff;
 }
 .welcome-banner .welcome-content p {
-  font-size: 18px;
+  font-size: 1rem;
   margin: 0;
   color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
 }
 .welcome-banner .navbar-icons {
   gap: 20px;
@@ -14235,8 +14250,8 @@ html {
   padding: 15px 0;
 }
 .events-section .events-carousel .carousel-indicators button {
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 1px solid #323130;
   background: transparent;
@@ -14256,8 +14271,8 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: #0B1F41;
 }
@@ -14515,8 +14530,8 @@ html {
   padding: 15px 0;
 }
 .bulletin-offers-section .employee-offers .offers-carousel .carousel-indicators button {
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 1px solid #323130;
   background: transparent;
@@ -14536,8 +14551,8 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: #0B1F41;
 }
@@ -14684,7 +14699,7 @@ html {
   box-shadow: 0 8px 32px rgba(0, 32, 96, 0.2);
 }
 .divisions-section .divisions-grid .division-card:hover .division-bar {
-  background-color: #002060;
+  background-color: #0B1F41;
 }
 .divisions-section .divisions-grid .division-card .division-image img {
   width: 100%;
@@ -14807,10 +14822,6 @@ html {
   align-items: center;
 }
 .main-footer .footer-logo .logo-icon {
-  width: 35px;
-  height: 35px;
-  background-color: #002060;
-  border-radius: 6px;
   margin-right: 10px;
   display: flex;
   align-items: center;
@@ -14839,6 +14850,11 @@ html {
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
+}
+@media (max-width: 1280px) {
+  .main-footer .footer-nav ul li a {
+    font-size: 14px;
+  }
 }
 .main-footer .footer-nav ul li a:hover {
   color: #00aeef;
@@ -16081,10 +16097,6 @@ html {
   }
 }
 @media (max-width: 768px) and (max-width: 576px) {
-  .main-footer .footer-logo .logo-icon {
-    width: 32px;
-    height: 32px;
-  }
   .main-footer .footer-logo .brand-text {
     font-size: 16px;
   }
