@@ -8,6 +8,8 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
     @include max(1600) {
       font-size: 16px;
     }
@@ -17,6 +19,8 @@ body {
     position: relative;
     margin: 0 auto;
     padding-top: size(0);
+	max-width: 100%;
+	overflow-x: hidden;
 }
 img {
     max-width: 100%;

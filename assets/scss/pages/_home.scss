@@ -8,9 +8,11 @@ body {
     line-height: 1.6;
     color: $text-primary;
     background-color: $white;
+    padding-top: 70px; // Account for fixed navbar
     // Prevent layout shift when overlays/dropdowns toggle scrollbars
-    scrollbar-gutter: stable both-edges;
-    
+    @include max(991.98){
+        padding-top: size(65);
+    }
     // Custom text selection color
     ::selection {
         background-color: rgba($dark-blue, 0.2);
@@ -586,7 +588,6 @@ html {
                 
                 &:hover {
                     color: $dark-blue;
-                    text-decoration: underline;
                 }
             }
         }
@@ -1732,7 +1733,12 @@ html {
                 padding: 15px 20px;
                 transition: background-color 0.3s ease;
                 cursor: pointer;
-                a { color: $white; text-decoration: none; }
+                @include max(767.98) {
+                    text-align: center;
+                }
+                a { 
+                    color: $white; text-decoration: none; 
+                }
                 
                 span {
                     color: $white;
@@ -1995,7 +2001,9 @@ html {
         
         .hero-banner {
             max-height: 460px; // Slightly reduced height
-            
+            @include max(767.98){
+                max-height: 340px;
+            }
             .hero-overlay {
                 padding: 18px 18px 12px; // Adjusted padding
                 
@@ -2120,16 +2128,26 @@ html {
         }
         
         .navbar-icons {
-            justify-content: center;
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 15px;
-            align-items: start;
-            
+            margin-top: 20px;
+            justify-items: center;
+            @include max(768) {
+                flex-wrap: wrap;
+                min-width: 100%;
+                justify-content: space-around;
+            }
             .icon-item {
+                @include max(767.98){
+                    width: calc(33.33% - 30px);
+                }
                 .icon-circle {
                     width: 45px;
                     height: 45px;
-                    
+                    @include max(767.98){
+                        margin: 0 auto 5px auto;
+                    }
                     i {
                         font-size: 16px;
                     }
@@ -2141,19 +2159,29 @@ html {
                 
                 // Mobile dropdown styles
                 &.dropdown {
+                    grid-column: 1 / -1; // Span full width in grid
+                    
                     .dropdown-menu {
                         position: absolute;
-                        opacity: 1;
-                        visibility: visible;
+                        opacity: 0;
+                        visibility: hidden;
                         transform: none;
                         box-shadow: none;
                         background-color: rgba($white, 0.1);
                         border-radius: 8px;
                         margin: 8px 0 0 0;
                         min-width: auto;
+                        left: 50%;
+                        transform: translateX(-50%);
                         
                         &::before {
                             display: none;
+                        }
+                        
+                        &.show {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateX(-50%);
                         }
                         
                         .dropdown-item {
