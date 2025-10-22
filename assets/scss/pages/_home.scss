@@ -8,7 +8,7 @@ body {
     line-height: 1.6;
     color: $text-primary;
     background-color: $white;
-    padding-top: 70px; // Account for fixed navbar
+    padding-top: size(79.59); // Account for fixed navbar
     // Prevent layout shift when overlays/dropdowns toggle scrollbars
     @include max(991.98){
         padding-top: size(65);
@@ -341,6 +341,7 @@ html {
                     
                     h2 {
                         transform: translateY(-2px);
+                        color: white!important;
                     }
                 }
             }
@@ -796,9 +797,14 @@ html {
         }
     }
     .date-badge-wrap{
-        color: white;
         left: size(16);
         bottom: size(16);
+        *{
+            color: white!important;
+        }
+        h4{
+            margin-bottom: 0!important;
+        }
     }
     .events-carousel {
         position: relative;

@@ -1,0 +1,379 @@
+// Common Elements Styles for Inner Pages
+// =====================================
+
+// Button Styles
+// =============
+.btn {
+    font-family: $font-family;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    
+    // Primary Button
+    &.btn-primary {
+        background-color: $dark-blue;
+        color: $white;
+        padding: 12px 24px;
+        font-size: 16px;
+        
+        &:hover {
+            background-color: darken($dark-blue, 10%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba($dark-blue, 0.3);
+        }
+        
+        &:active {
+            transform: translateY(0);
+        }
+        
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba($dark-blue, 0.25);
+        }
+    }
+    
+    // Secondary Button
+    &.btn-secondary {
+        background-color: transparent;
+        color: $dark-blue;
+        border: 2px solid $dark-blue;
+        padding: 10px 22px;
+        font-size: 16px;
+        
+        &:hover {
+            background-color: $dark-blue;
+            color: $white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba($dark-blue, 0.2);
+        }
+        
+        &:active {
+            transform: translateY(0);
+        }
+        
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba($dark-blue, 0.25);
+        }
+    }
+    
+    // Outline Button
+    &.btn-outline {
+        background-color: transparent;
+        color: $text-primary;
+        border: 1px solid $gray-300;
+        padding: 10px 20px;
+        font-size: 14px;
+        
+        &:hover {
+            background-color: $gray-100;
+            border-color: $dark-blue;
+            color: $dark-blue;
+        }
+        
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba($dark-blue, 0.1);
+        }
+    }
+    
+    // Large Button
+    &.btn-lg {
+        padding: 16px 32px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+    
+    // Small Button
+    &.btn-sm {
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    
+    // Icon Button
+    &.btn-icon {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border-radius: 50%;
+        
+        i {
+            font-size: 16px;
+        }
+    }
+    
+    // Disabled State
+    &:disabled,
+    &.disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+}
+
+// Heading Styles
+// =============
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family;
+    font-weight: 600;
+    line-height: 1.3;
+    color: $dark;
+    margin-bottom: 16px;
+    
+    // Remove default margins for better control
+    &:first-child {
+        margin-top: 0;
+    }
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// H1 - Page Title
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: $dark-blue;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    
+    @media (max-width: 768px) {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    @media (max-width: 576px) {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+}
+
+// H2 - Section Title
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: $dark;
+    margin-bottom: 20px;
+    
+    @media (max-width: 768px) {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+    
+    @media (max-width: 576px) {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+}
+
+// H3 - Subsection Title
+h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: $dark;
+    margin-bottom: 16px;
+    
+    @media (max-width: 768px) {
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+    
+    @media (max-width: 576px) {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+}
+
+// H4 - Card Title
+h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: $dark;
+    margin-bottom: 14px;
+    
+    @media (max-width: 768px) {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    @media (max-width: 576px) {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+// H5 - Small Title
+h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: $dark;
+    margin-bottom: 12px;
+    
+    @media (max-width: 768px) {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+// H6 - Micro Title
+h6 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $text-muted;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    @media (max-width: 768px) {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+}
+
+// Paragraph Styles
+// ===============
+p {
+    font-family: $font-family;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $text-primary;
+    margin-bottom: 16px;
+    
+    // Remove default margins for better control
+    &:first-child {
+        margin-top: 0;
+    }
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    // Large Paragraph
+    &.large {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        
+        @media (max-width: 768px) {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+    }
+    
+    // Small Paragraph
+    &.small {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        
+        @media (max-width: 768px) {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+    }
+    
+    // Muted Paragraph
+    &.muted {
+        color: $text-muted;
+    }
+    
+    // Lead Paragraph (intro text)
+    &.lead {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.6;
+        color: $text-muted;
+        margin-bottom: 24px;
+        
+        @media (max-width: 768px) {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 576px) {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+// Text Utility Classes
+// ====================
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-primary { color: $text-primary; }
+.text-secondary { color: $text-muted; }
+.text-success { color: $green; }
+.text-warning { color: $yellow; }
+.text-danger { color: $red; }
+.text-info { color: $cyan; }
+
+.font-weight-light { font-weight: 300; }
+.font-weight-normal { font-weight: 400; }
+.font-weight-medium { font-weight: 500; }
+.font-weight-semibold { font-weight: 600; }
+.font-weight-bold { font-weight: 700; }
+
+// Responsive Text Sizes
+// ====================
+@media (max-width: 768px) {
+    p {
+        font-size: 15px;
+        margin-bottom: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    p {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+}
+
+// Focus States for Accessibility
+// ==============================
+.btn:focus,
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus,
+p:focus {
+    outline: 2px solid $dark-blue;
+    outline-offset: 2px;
+}
+
+// Print Styles
+// ============
+@media print {
+    .btn {
+        background-color: transparent !important;
+        color: $dark !important;
+        border: 1px solid $dark !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: $dark !important;
+        page-break-after: avoid;
+    }
+    
+    p {
+        color: $dark !important;
+        page-break-inside: avoid;
+    }
+}

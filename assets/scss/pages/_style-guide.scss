@@ -14,6 +14,7 @@ $dark-gray: #333333 !default; // Primary text
 $border-gray: #ddd !default;
 $midnight-dark: #323130 !default;
 $midnight-light: #0B1F41 !default;
+$main-bg : #0b1f40 !default;
 
 // Custom colors for specific elements
 $welcome-bg: $dark-blue !default;
@@ -156,5 +157,17 @@ $filter-z:99;
   color: $midnight-light!important;
 }
 .text-secondary{
-  color: $text-secondary;
+  color: $secondary-color!important;
+}
+.bg-main{
+  background-color: $main-bg!important;
+}
+.inner-banner{
+  height: 400px;
+  img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+  }
 }
