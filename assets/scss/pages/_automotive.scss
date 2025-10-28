@@ -1,0 +1,468 @@
+// Automotive Page Specific Styles
+
+// Top Navbar Enhancements
+.top-navbar {
+    .brand-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-left: 8px;
+        
+        .brand-name {
+            color: $white;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1;
+        }
+        
+        .brand-text {
+            color: $white;
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 2px;
+        }
+    }
+    
+    .search-bar {
+        flex: 1;
+        max-width: 400px;
+        margin: 0 40px;
+        position: relative;
+        
+        @include max(991) {
+            display: none;
+        }
+        
+        i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $medium-gray;
+        }
+        
+        input {
+            width: 100%;
+            padding: 8px 15px 8px 40px;
+            border: 1px solid $border-gray;
+            border-radius: 4px;
+            font-size: 14px;
+            
+            &:focus {
+                outline: none;
+                border-color: $secondary-color;
+            }
+        }
+    }
+    
+    .navbar-icons {
+        display: flex;
+        gap: 20px;
+        
+        @include max(991) {
+            gap: 15px;
+        }
+        
+        .icon-item {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+// Secondary Navigation
+.secondary-nav {
+    padding: 10px 0;
+    border-bottom: 1px solid $border-gray;
+    
+    .secondary-nav-content {
+        display: flex;
+        align-items: center;
+        
+        .main-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 30px;
+            
+            @include max(991) {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            li {
+                a {
+                    color: $text-primary;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                    display: inline-flex;
+                    align-items: center;
+                    transition: color 0.3s ease;
+                    
+                    i {
+                        font-size: 10px;
+                        margin-left: 5px;
+                    }
+                    
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Page Header for Automotive
+.page-header {
+    background-color: $dark-blue;
+    padding: 30px 0;
+    
+    .page-title {
+        color: $secondary-color;
+        font-size: 48px;
+        font-weight: 700;
+        margin: 0;
+        line-height: 1.2;
+        
+        @include max(991) {
+            font-size: 38px;
+        }
+        
+        @include max(767) {
+            font-size: 32px;
+        }
+    }
+}
+
+// Hero Section for Automotive Page
+.automotive-hero {
+    background-color: $dark-blue;
+    
+    .hero-image-container {
+        height: 500px;
+        overflow: hidden;
+        
+        @include max(991) {
+            height: 400px;
+        }
+        
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    .hero-text-block {
+        background-color: #0078D4;
+        padding: 60px 40px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 500px;
+        
+        @include max(991) {
+            min-height: 400px;
+            padding: 40px 30px;
+        }
+        
+        @include max(767) {
+            padding: 30px 20px;
+            min-height: 350px;
+        }
+        
+        .hero-headline {
+            color: $white;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            
+            @include max(991) {
+                font-size: 30px;
+            }
+            
+            @include max(767) {
+                font-size: 26px;
+                margin-bottom: 15px;
+            }
+        }
+        
+        .hero-body-text {
+            color: $white;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            
+            @include max(767) {
+                font-size: 14px;
+            }
+        }
+        
+        .hero-cta {
+            color: $white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            
+            @include max(767) {
+                font-size: 14px;
+            }
+            
+            i {
+                font-size: 14px;
+            }
+            
+            &:hover {
+                color: $secondary-color;
+                transform: translateX(5px);
+                
+                i {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+}
+
+// Content Sections
+.content-section {
+    .section-heading {
+        color: $midnight-dark;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.3;
+        
+        @include max(991) {
+            font-size: 28px;
+        }
+        
+        @include max(767) {
+            font-size: 24px;
+        }
+    }
+    
+    .section-subheading {
+        color: $text-primary;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.3;
+        
+        @include max(767) {
+            font-size: 20px;
+        }
+    }
+    
+    .section-text {
+        color: $text-secondary;
+        font-size: 16px;
+        line-height: 1.7;
+        
+        @include max(767) {
+            font-size: 15px;
+        }
+    }
+    
+    .content-image {
+        img {
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+    }
+    
+    .image-caption {
+        color: $medium-gray;
+        font-size: 14px;
+        font-style: italic;
+        margin-top: 10px;
+    }
+    
+    .bg-light-gray {
+        background-color: $light-gray;
+    }
+}
+
+// Partner Logos Section
+.partner-logos {
+    .logo-placeholder {
+        border-radius: 8px;
+    }
+}
+
+// Leadership Section
+.leadership-section {
+    .team-member-card {
+        padding: 20px;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-5px);
+        }
+        
+        .member-image {
+            margin-bottom: 20px;
+            
+            img {
+                width: 100%;
+                max-height: 340px;
+                object-fit: cover;
+                border: 3px solid $white;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+        }
+        
+        .member-name {
+            color: $midnight-dark;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            
+            @include max(767) {
+                font-size: 18px;
+            }
+        }
+        
+        .member-title {
+            color: $text-secondary;
+            font-size: 16px;
+            margin-bottom: 12px;
+            
+            @include max(767) {
+                font-size: 14px;
+            }
+        }
+        
+        .member-link {
+            color: $secondary-color;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                color: $dark-blue;
+                transform: translateX(3px);
+            }
+        }
+    }
+}
+
+// Related Highlights Section
+.related-highlights {
+    .highlight-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .highlight-image {
+            position: relative;
+            overflow: hidden;
+            
+            img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+                
+                @include max(767) {
+                    height: 250px;
+                }
+            }
+            
+            &:hover img {
+                transform: scale(1.05);
+            }
+            
+            .highlight-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(transparent, rgba(0, 32, 96, 0.9));
+                padding: 30px 25px 25px;
+                
+                @include max(767) {
+                    padding: 20px 15px 15px;
+                }
+                
+                .highlight-text {
+                    color: $white;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                    font-weight: 500;
+                    
+                    @include max(767) {
+                        font-size: 14px;
+                        margin-bottom: 12px;
+                    }
+                }
+                
+                .btn {
+                    background-color: $white;
+                    color: $dark-blue;
+                    border: none;
+                    padding: 10px 24px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    border-radius: 4px;
+                    transition: all 0.3s ease;
+                    
+                    &:hover {
+                        background-color: $secondary-color;
+                        color: $white;
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive Styles
+@include max(768) {
+    .content-section {
+        padding: 40px 0;
+        
+        .section-heading {
+            font-size: 24px;
+        }
+        
+        .section-subheading {
+            font-size: 20px;
+        }
+    }
+    
+    .leadership-section {
+        .team-member-card {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+

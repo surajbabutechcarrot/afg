@@ -1,39 +1,5 @@
 // Overview Page Styles
-// Breadcrumb Navigation
-.breadcrumb-nav {
-    background-color: $dark-blue;
-    padding: 8px 0;
-    
-    .breadcrumb {
-        margin: 0;
-        background: none;
-        padding: 0;
-        
-        .breadcrumb-item {
-            color: rgba($white, 0.7);
-            font-size: 14px;
-            
-            a {
-                color:$midnight-light;
-                text-decoration: none;
-                
-                &:hover {
-                    color: $white;
-                }
-            }
-            
-            &.active {
-                color:$secondary-color
-            }
-            
-            & + .breadcrumb-item::before {
-                content: "/";
-                color: $gray-500;
-                margin: 0 8px;
-            }
-        }
-    }
-}
+
 
 // Division Navigation
 .division-nav {
