@@ -203,10 +203,12 @@
         
         i {
             position: absolute;
-            left: 15px;
+            left: 12px;
             top: 50%;
             transform: translateY(-50%);
-            color: $medium-gray;
+            color: gray;
+            top: 50%;
+            transform: translateY(-50%);
             font-size: 14px;
         }
         
@@ -237,8 +239,8 @@
             transform: translateY(-50%);
             background-color: #00aeef;
             border: none;
-            padding: 8px 15px;
-            border-radius: 0;
+            padding: 8px 20px;
+            border-radius: 0 6px 6px 0;
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s ease;

@@ -17539,10 +17539,12 @@ section.p-0 .document-card .document-btn {
 }
 .page-header-section .panel-search i {
   position: absolute;
-  left: 15px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  color: #666666;
+  color: gray;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 14px;
 }
 .page-header-section .panel-search input {
@@ -17569,8 +17571,8 @@ section.p-0 .document-card .document-btn {
   transform: translateY(-50%);
   background-color: #00aeef;
   border: none;
-  padding: 8px 15px;
-  border-radius: 0;
+  padding: 8px 20px;
+  border-radius: 0 6px 6px 0;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
